@@ -27,17 +27,17 @@
     /* Résultats */
     .grid {
       height: 100vh;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      gap: 2%;
+      display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 2%;
+
+
       /** Votre personnalisation ici **/
     }
 
     .item {
       background-color: #f08080;
       counter-increment: grid-counter;
-      width: 30%;
       align-content: center;
       text-align: center;
     }
