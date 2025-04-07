@@ -18,13 +18,12 @@
 
     .container {
       height: 100vh;
-
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+      justify-content: space-between;
       align-items: center;
     }
-.flex
-    {
+    .flex {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -43,32 +42,25 @@
       text-transform: uppercase;
       font-weight: bold;
     }
-.flex > .item:nth-child(1),
-    .flex > .item:nth-child(2) {
-      display: flex;
-    }
+
+
     .item:first-of-type {
       background: #ff8487;
       align-self: flex-start;
     }
 
-    
-
     .item:nth-child(2) {
       background: #3c38ba;
-      align-self: flex-end;
-;
-    }
+     position: absolute;
+     align-self: flex-end;
+      }
 
+      /* Bon je ne sais pas si j'ai triche mais ça m'as énerve :-) */
     .item:nth-child(3) {
       background: #00c774;
       align-self: center;
     }
-
-
-
-    
-  </style>
+  </style>  
   <body>
     <div class="container">
       <div class="flex">
