@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Interface Non Accessible</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="header">
+			<h1>Bienvenue sur notre site</h1>
+			<div class="nav">
+				<ul>
+					<li><a href="#">Accueil</a></li>
+					<li><a href="#">Services</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="main">
+			<h2>Nos Services</h2>
+			<button
+				class="toggle_menu_services"
+				aria-expanded="false"
+				aria-controls="menuServices">
+				☰ Menu
+			</button>
+
+			<ul class="menu_services" hidden>
+				<li><a href="#">Développement web</a></li>
+				<li><a href="#">SEO</a></li>
+				<li><a href="#">SEA</a></li>
+				<li><a href="#">Marketing Digital</a></li>
+				<li><a href="#">UX Design</a></li>
+			</ul>
+
+			<div class="service">
+				<h3>Développement Web</h3>
+				<p>Nous créons des sites modernes et sur-mesure.</p>
+				<button>En savoir plus</button>
+			</div>
+
+			<div class="service">
+				<h3>SEO</h3>
+				<p>Optimisation des sites pour Google.</p>
+				<button>En savoir plus</button>
+			</div>
+
+			<img src="http://picsum.photos/800/600?v=1" />
+
+			<div class="contact">
+				<h2>Nous contacter</h2>
+				<form>
+					<input type="text" placeholder="Nom complet" />
+					<input type="email" placeholder="Email" />
+					<textarea placeholder="Votre message"></textarea>
+					<button>Envoyer</button>
+				</form>
+			</div>
+		</div>
+
+		<div class="footer">
+			<p>© 2025 - Tous droits réservés</p>
+		</div>
+		<script>
+			// Script pour gérer l'ouverture/fermeture du menu accessible
+			document
+				.getElementById("menuServices-toggle")
+				.addEventListener("click", function () {
+					let menu = document.getElementById("menuServices");
+					let expanded = this.getAttribute("aria-expanded") === "true" || false;
+
+					this.setAttribute("aria-expanded", !expanded);
+					menu.hidden = expanded;
+				});
+		</script>
+	</body>
+</html>
