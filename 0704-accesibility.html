@@ -7,80 +7,155 @@
     <title>Interface Non Accessible</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-
+  
   <body>
-    <header class="header">
-      <h1 class="title" title="Bienvenuesur notre site">
-        Bienvenue sur notre site
-      </h1>
-      <nav class="nav" role="navigation" aria-label="Menu principal">
+    <main>
+      <header class="header">
+        <h1
+          class="title"
+          title="Bienvenuesur notre site"
+          role="title"
+          aria-label="Titre principal"
+        >
+          Bienvenue sur notre site
+        </h1>
+
         <ul>
           <li><a href="#Accueil" tabindex="0">Accueil</a></li>
-          <li><a href="#Services" tabindex="1">Services</a></li>
-          <li><a href="#Contact" tabindex="2">Contact</a></li>
+          <li><a href="#Services" tabindex="0">Services</a></li>
+          <li><a href="#Contact" tabindex="0">Contact</a></li>
         </ul>
-      </nav>
-    </header>
-    <nav id="nav-burger" role="navigation" aria-label="Menu des services">
-      <button
-        class="toggle_menu_services"
-        aria-expanded="false"
-        aria-controls="menuServices"
-        onclick="toggleMenu()"
-        id="menuServices-toggle"
-      >
-        ☰ Menu
-      </button>
-      <div>
-        <ul class="menu_services" hidden>
-          <li><a href="#">Développement web</a></li>
-          <li><a href="#">SEO</a></li>
-          <li><a href="#">SEA</a></li>
-          <li><a href="#">Marketing Digital</a></li>
-          <li><a href="#">UX Design</a></li>
-        </ul>
-      </div>
-    </nav>
-    <div class="main">
-      <h2>Nos Services</h2>
 
-      <div class="service">
-        <h3>Développement Web</h3>
-        <p>Nous créons des sites modernes et sur-mesure.</p>
-        <button>En savoir plus</button>
-      </div>
+        <nav id="nav-burger" role="navigation" aria-label="Menu des services">
+          <button aria-expanded="false" aria-controls="menuServices">
+            ☰ Menu
+          </button>
 
-      <div class="service">
-        <h3>SEO</h3>
-        <p>Optimisation des sites pour Google.</p>
-        <button>En savoir plus</button>
-      </div>
+          <div class="menuServices" hidden>
+            <ul id="menuServices-toggle">
+              <li>
+                <a
+                  href="#Developpement-web"
+                  tabindex="0"
+                  title="page développementweb"
+                  >Développement web</a
+                >
+              </li>
+              <li>
+                <a href="#SEO" tabindex="0" title="Page sûr le Seo">SEO</a>
+              </li>
+              <li>
+                <a href="#SEA" tabindex="0" title="Page sûr le SEA">SEA</a>
+              </li>
+              <li>
+                <a
+                  href="#Marketing-Digital"
+                  tabindex="0"
+                  title="Page sur leur Marketing Digital"
+                  >Marketing Digital</a
+                >
+              </li>
+              <li>
+                <a href="#UX-Design" tabindex="0" title="Page sur le Ux Design"
+                  >UX Design</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
 
-      <img src="http://picsum.photos/800/600?v=1" />
+      </header>
+      <section id="Services" class="services">
+        <h2>Nos Services</h2>
 
-      <div class="contact">
+        <div class="service">
+          <h3>Développement Web</h3>
+          <p>Nous créons des sites modernes et sur-mesure.</p>
+          <button>En savoir plus</button>
+        </div>
+
+        <div class="service">
+          <h3>SEO</h3>
+          <p>Optimisation des sites pour Google.</p>
+          <button class="btn-savoir">En savoir plus</button>
+        </div>
+
+        <img
+          src="http://picsum.photos/800/600?v=1"
+          alt="image d'une station dépuration"
+        />
+      </section>
+
+      <section id="Contact" class="contact-section">
         <h2>Nous contacter</h2>
-        <form>
-          <input
-            type="text"
-            placeholder="Nom complet"
-            role="contentinfo"
-            value="Your name"
-          />
-          <input type="email" placeholder="Email" />
-          <textarea placeholder="Votre message"></textarea>
-          <button>Envoyer</button>
-        </form>
-      </div>
-    </div>
 
-    <div class="footer">
+        <fieldset>
+          <form
+            action="POST"
+            method="POST"
+            class="contact-form"
+            role="form"
+            aria-label="Formulaire de contact"
+            enctype="multipart/form-data"
+          >
+            <legend>
+              <h3>Formulaire de contact</h3>
+              <p>Nous serons ravis de vous répondre.</p>
+            </legend>
+            <div class="name-form">
+              <label for="name">Votre nom </label>
+              <input
+                type="text"
+                required
+                id="name"
+                name="name"
+                aria-required="true"
+                placeholder="Nom complet"
+                role="contentinfo"
+              />
+            </div>
+
+            <div>
+              <label for="email">Votre email</label>
+              <input
+                type="email"
+                aria-required="true"
+                placeholder="Email"
+                id="email"
+                name="email"
+                placeholder="ex: moi@gmail.com"
+                maxlength="200"
+                required
+              />
+            </div>
+            <div>
+              <label for="message">Votre message</label>
+              <textarea
+                placeholder="Votre message"
+                type="message"
+                role="text"
+                value="message"
+                id="message"
+                name="message"
+                rows="4"
+                cols="50"
+                aria-label="message"
+                aria-required="true"
+              ></textarea>
+            </div>
+            <button class="btn-form">Envoyer</button>
+          </form>
+        </fieldset>
+      </section>
+    </main>
+    <footer class="footer">
       <p>© 2025 - Tous droits réservés</p>
-    </div>
+    </footer>
+
     <script>
       // Script pour gérer l'ouverture/fermeture du menu accessible
       document
-        .getElementById("menuServices-toggle")
+        .getElementById("menuServices")
         .addEventListener("click", function () {
           let menu = document.getElementById("menuServices");
           let expanded = this.getAttribute("aria-expanded") === "true" || false;
