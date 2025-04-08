@@ -43,7 +43,6 @@
       font-weight: bold;
     }
 
-
     .item:first-of-type {
       background: #ff8487;
       align-self: flex-start;
@@ -51,16 +50,22 @@
 
     .item:nth-child(2) {
       background: #3c38ba;
-     position: absolute;
-     align-self: flex-end;
-      }
+      position: absolute;
+      align-self: flex-end;
+    }
 
-      /* Bon je ne sais pas si j'ai triche mais ça m'as énerve :-) */
+    /* Bon je ne sais pas si j'ai triche mais ça m'as énerve :-) */
     .item:nth-child(3) {
       background: #00c774;
       align-self: center;
     }
-  </style>  
+
+    /* Je me suis trompée j'aime bien me complique la vie moi , en gros il fallais que le 1,2,3 sois dabord
+    display : flex 
+    justify-content : space-between
+    
+    */
+  </style>
   <body>
     <div class="container">
       <div class="flex">
