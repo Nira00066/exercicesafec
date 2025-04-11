@@ -38,6 +38,43 @@ Premiers pas avec le CSS :
 
     Compréhension du lien entre HTML & CSS
 
+### 1104 - CSS Responsive
+
+#### 🎯 Objectif
+
+Réaliser le CSS **+ CSS responsive** pour reproduire les visuels fournis.  
+L’objectif est d’appliquer des _media queries_ pour rendre la version mobile utilisable.
+
+> Vous pouvez utiliser la page HTML fournie (lien plus bas ou dans le `.zip`)  
+> Et uploader votre travail via **FileZilla** pour le tester sur votre téléphone :  
+> Exemple : `https://www.afecdax.ovh/alvyn/`
+
+Deux options pour écrire le CSS :
+
+- Dans une **nouvelle feuille de style externe**
+- Ou directement dans la page HTML entre les balises `<style>...</style>`
+
+---
+
+#### 📐 Consignes techniques
+
+- La grille doit être **fluide** :
+  - Plus l’écran est large, plus il y a de **colonnes**.
+  - Plus l’écran est étroit, plus les colonnes passent **les unes sous les autres** (comme dans la vidéo).
+- En version mobile :
+  - Les **images doivent être à gauche** des noms des produits (et **pas au-dessus**, comme en desktop/tablette).
+
+---
+
+#### ✅ À ne pas oublier
+
+- **Accessibilité** : structure logique, contrastes, navigation clavier, `aria`, etc.
+- Utiliser **Lighthouse** dans Chrome pour vérifier l’accessibilité :  
+  [Doc Lighthouse Microsoft](https://learn.microsoft.com/fr-fr/microsoft-edge/devtools-guide-chromium/accessibility/lighthouse)
+- Penser aux bonnes pratiques **SEO** :
+  - Titres bien hiérarchisés (`h1`, `h2`, etc.)
+  - Balises `alt` sur les images
+
 📌 À venir
 
 Ce README sera mis à jour régulièrement avec de nouveaux dossiers au fur et à mesure de la formation.
