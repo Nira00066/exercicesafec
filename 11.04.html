@@ -125,12 +125,12 @@
         grid-template-columns: repeat(1, 1fr);
       }
       div.c-product_inner {
-        height:8.5rem ;
+        height: 8.5rem;
         display: flex;
         justify-content: start;
         gap: var(--product-grid-gap-mob);
       }
-      .c-product_thumb img  {
+      .c-product_thumb img {
         width: var(--product-image-max-width-mobile);
         padding-bottom: 0.5rem;
       }
@@ -154,23 +154,77 @@
     <div class="container">
       <h1>Tous nos produits</h1>
       <ul class="c-breadcrumb">
-        <li><a href="#">Accueil</a></li>
-        <li><a href="#">Produits</a></li>
+        <li><a href="#" tabindex="0">Accueil</a></li>
+        <li><a href="#" tabindex="0">Produits</a></li>
         <li>Téléphones</li>
       </ul>
       <section class="c-products-grid">
-        <div class="c-product">
+        <div class="c-product" tabindex="0">
           <div class="c-product_inner">
             <div class="c-product_thumb">
               <img
                 src="data:image/webp;base64,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"
+                alt="image de Téléphones samsung Galaxy S25"
               />
             </div>
             <div class="c-product_infos">
               <div class="c-product_title">
-                <a href="#">Samsung Galaxy S25</a>
+                <a
+                  href="#"
+                  tabindex="0"
+                  aria-label="information supplimentaire duSamsung Galaxy S25 "
+                  >Samsung Galaxy S25</a
+                >
               </div>
-              <div class="c-product_price">1800,00€</div>
+              <div
+                class="c-product_price"
+                aria-details="prix du telephone est de 1800,00€ "
+              >
+                1800,00€
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="c-product" tabindex="0">
+          <div class="c-product_inner">
+            <div class="c-product_thumb">
+              <img
+                src="data:image/webp;base64,UklGRoQEAABXRUJQVlA4IHgEAACwHACdASqFAIUAPj0cjUQiIagS+Zz4gAPE
+                s6I7kNW0fsb8767Nu/zsGm9l0XjWfRX0YvU+/N9CAmDKp7aJZuVMVDlo8SeS1lf3kE6JoOpKWwOp1CA+92Yq8Zxm
+                uAuMT1ygT3SYyCXbwPT+C7u5zExVWX7mhuuiiqoio4Iarih+fDzsmeKOqhx7eztfiSg3FRo6XCYZe8q4/NYSl92D1p
+                oVO/gAjNZTYUwCTh1us4svulGHjFl/XFFQ/UO8eh2XW7NDOJnVRqoEsFSQqKFD0fY8jHdz/723LZAyyQ41XFUm+HVE
+                4+nDhtfgocXAgqAAAP791pz9UTKJ+w4zgN/nn1Z0eECYw3MDQydWCAeEMv6qvpFvQyZ3Mg3CI9RTzGqD4175MM9IES
+                RgpD4Zk0RrLgSG5M63kFv7XdK8XiN+L1/kqP9dxyCLuJbmZTE/1sdtFZcpjA6eDCCx5wizOsDQt9viPMwDU86iAlUp6
+                hi7ezzjXkr
+                ZAvDNPHLq38IQFOuP0QNWqbaRw/lVltxGgMpCXeWFnVDU9WLK8up1dq65Ts+Gg459X6OKL1pD365biU13
+                lvLxVF3q72MsdYQTE/nwL/GddfoYeLFMvPJdneptb12/dadHwww7en+EjYNKKuqsiIwgLdgIo3nF3iqZJO+u
+                3DmAATR4Qehjep0h4vkiMUe4t/cOrpEWXVzLqLvppCeGT54WCc7ZtKp7hKPXfC0/eGp2zbtbhE8TZmD0IdoJ7N7Li
+                zQsgXo2c8CH/DRqRd4iGxENRRixfvSVQ4GlhxAf488DBj/yWgXjvT2GPe3C0/ly5eV/8kV9J9gzN6f8vBhQ3epkr/
+                4Fnv8Gjv424X2/GtdJl9pCDWhQx/lpQtfm3rel9vMjJqaQMj0zxAht0uRfuYNKXPUULvxBf4ItkhCwFeu7X2Ro/P+P
+                DBW5AUtOJ/aoHYe+A9y/Drnv6IwzxTpsr9tnzGz6lz59v60IniyWn4RszM4jXvb38J7LX91rnLv3Pmevq+n9bLoQZ4u2R
+                ladwXcyXBY6S9CO4fxe4+6p1v+ps7oZBqJzSBD3h4EwOhMkZegkXP0Vo9yGDMgMWOraBg8SNOmT36n9DQ1SIzLVv8X12Tg
+                +fTRz3MQs/FuBM1AuUP5RWJyFpTRxu++2vXmrr+okiOLnMCfm0HB09BxRBZ9V2pKMhxuI3cCwbcgN5ogHoi1WcyvxOxEN1
+                YxN1/rEJMUYiNvhTBG3GnLDCjgeMkOsd3HpMwMhqdczGzjmRqd11uDB2GTOIQkbq47uOO+6jfl0UjJdQ5Z8E8ntWajCT0lA
+                F3RXJ+Dk0p5x1FvVOpKTalIyiT+E6nmeFAaMIam9aFqcsThapdwz40tDIfaLvj40/0x00gkTmFqbcJ4QgembpUQW4PEm8b
+                Zek7XWvHo5NoQy3UpKhR8GKwf9A9wllunbmzLqPpqsVRDFCEdso9DZeHaGPvSYd1ypPP1GtAAhy14x5SRvyW6MaiAEUuBC
+                0CbtJ3+hJwbnG754xydoH3Tc6NUvxAYAAAAA"
+                alt="image de Téléphones samsung Galaxy A55"
+              />
+            </div>
+            <div class="c-product_infos">
+              <div class="c-product_title" tabindex="0">
+                <a
+                  href="#"
+                  aria-label="information supplimentaire duSamsung Galaxy A55"
+                  >Samsung Galaxy A55</a
+                >
+              </div>
+              <div
+                class="c-product_price"
+                aria-details="prix du telephone est de 1340,00€ "
+              >
+                1340,00€
+              </div>
             </div>
           </div>
         </div>
@@ -178,14 +232,18 @@
           <div class="c-product_inner">
             <div class="c-product_thumb">
               <img
-                src="data:image/webp;base64,UklGRoQEAABXRUJQVlA4IHgEAACwHACdASqFAIUAPj0cjUQiIagS+Zz4gAPEs6I7kNW0fsb8767Nu/zsGm9l0XjWfRX0YvU+/N9CAmDKp7aJZuVMVDlo8SeS1lf3kE6JoOpKWwOp1CA+92Yq8ZxmuAuMT1ygT3SYyCXbwPT+C7u5zExVWX7mhuuiiqoio4Iarih+fDzsmeKOqhx7eztfiSg3FRo6XCYZe8q4/NYSl92D1poVO/gAjNZTYUwCTh1us4svulGHjFl/XFFQ/UO8eh2XW7NDOJnVRqoEsFSQqKFD0fY8jHdz/723LZAyyQ41XFUm+HVE4+nDhtfgocXAgqAAAP791pz9UTKJ+w4zgN/nn1Z0eECYw3MDQydWCAeEMv6qvpFvQyZ3Mg3CI9RTzGqD4175MM9IESRgpD4Zk0RrLgSG5M63kFv7XdK8XiN+L1/kqP9dxyCLuJbmZTE/1sdtFZcpjA6eDCCx5wizOsDQt9viPMwDU86iAlUp6hi7ezzjXkrZAvDNPHLq38IQFOuP0QNWqbaRw/lVltxGgMpCXeWFnVDU9WLK8up1dq65Ts+Gg459X6OKL1pD365biU13lvLxVF3q72MsdYQTE/nwL/GddfoYeLFMvPJdneptb12/dadHwww7en+EjYNKKuqsiIwgLdgIo3nF3iqZJO+u3DmAATR4Qehjep0h4vkiMUe4t/cOrpEWXVzLqLvppCeGT54WCc7ZtKp7hKPXfC0/eGp2zbtbhE8TZmD0IdoJ7N7LizQsgXo2c8CH/DRqRd4iGxENRRixfvSVQ4GlhxAf488DBj/yWgXjvT2GPe3C0/ly5eV/8kV9J9gzN6f8vBhQ3epkr/4Fnv8Gjv424X2/GtdJl9pCDWhQx/lpQtfm3rel9vMjJqaQMj0zxAht0uRfuYNKXPUULvxBf4ItkhCwFeu7X2Ro/P+PDBW5AUtOJ/aoHYe+A9y/Drnv6IwzxTpsr9tnzGz6lz59v60IniyWn4RszM4jXvb38J7LX91rnLv3Pmevq+n9bLoQZ4u2RladwXcyXBY6S9CO4fxe4+6p1v+ps7oZBqJzSBD3h4EwOhMkZegkXP0Vo9yGDMgMWOraBg8SNOmT36n9DQ1SIzLVv8X12Tg+fTRz3MQs/FuBM1AuUP5RWJyFpTRxu++2vXmrr+okiOLnMCfm0HB09BxRBZ9V2pKMhxuI3cCwbcgN5ogHoi1WcyvxOxEN1YxN1/rEJMUYiNvhTBG3GnLDCjgeMkOsd3HpMwMhqdczGzjmRqd11uDB2GTOIQkbq47uOO+6jfl0UjJdQ5Z8E8ntWajCT0lAF3RXJ+Dk0p5x1FvVOpKTalIyiT+E6nmeFAaMIam9aFqcsThapdwz40tDIfaLvj40/0x00gkTmFqbcJ4QgembpUQW4PEm8bZek7XWvHo5NoQy3UpKhR8GKwf9A9wllunbmzLqPpqsVRDFCEdso9DZeHaGPvSYd1ypPP1GtAAhy14x5SRvyW6MaiAEUuBC0CbtJ3+hJwbnG754xydoH3Tc6NUvxAYAAAAA"
+                src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:AN
+                d9GcQqrPkjAnCuSxhWCS-VGVsuC4xCmmT46LmtxxtDc4ZzbQuYRm-ipWyVakH
+                c9koSk2ZjYcOVc-nBHg5SOv1hQ1DTHjoNGZyDObPOPE4QC_-cSUKqydD0EHIi0L
+                GyZVWuSZCJ49_swg&usqp=CAc"
+                alt="image de Téléphones samsung Z flip 3"
               />
             </div>
             <div class="c-product_infos">
               <div class="c-product_title">
-                <a href="#">Samsung Galaxy A55</a>
+                <a href="#" tabindex="0" type="link" aria-label="information supplimentaire duSamsung Galaxy Z flip">Samsung Galaxy Z Flip 3</a>
               </div>
-              <div class="c-product_price">1340,00€</div>
+              <div class="c-product_price" tabindex="0"  aria-details="prix du telephone est de 319,00€ ">319,00€</div>
             </div>
           </div>
         </div>
@@ -193,14 +251,30 @@
           <div class="c-product_inner">
             <div class="c-product_thumb">
               <img
-                src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQqrPkjAnCuSxhWCS-VGVsuC4xCmmT46LmtxxtDc4ZzbQuYRm-ipWyVakHc9koSk2ZjYcOVc-nBHg5SOv1hQ1DTHjoNGZyDObPOPE4QC_-cSUKqydD0EHIi0LGyZVWuSZCJ49_swg&usqp=CAc"
+                src="data:image/webp;base64,UklGRvgJAABXRUJQVlA4IOwJAABwMgCd
+                ASqFAIUAPkkgjUUioiERyq6MKASEs4Bo2njB5udPqIu4wd/MDKj/kvXH3D7XX
+                AtZO7bT+V+qvHP/rfH3oCfn30PNBz1H7A/61f8bsDejB+0xevxo2Dl7leeNd8HnqtY
+                aPdV6593lU8UV9I8oK9PJUTgSG/hX42nCtNxSVC2fxFs7VWSjvVaY1uDz3PtgBM2VdWTD
+                yOIjK9ygMcVYu9Gqy7y1ig6qaXOHcXJE2/54wsE8BUUe+uDcHxq89TiLlu55AXhbeNugJtT
+                HAEQvTj7yfBgPUu8U2ZKK/wqBj0S4I5CMqeFNRgoEU5qaHBvnTw/mdDkcXkLMSIWROohoSM5o+
+                1UxhcW65yROlCxfPIOi2gOHtI3xvitxlSebiKglFb90x99D3AudLgoNb/Qt1TiT7jVAiy9TrEcM3J7
+                YV1tsC+0fdSbZMYrOKvL1ast/HGiSKMiGr0NVatoiU5b0NJDUiD0NamMPUuF0fUbQOgmU0gJ
+                XKXQvLuvt6ebeSxIa2M5k09PmgG0abXJJm0YVEuxtpbpZX6sb8KBAAP7/glN0QYnU5U
+                Ii2V7rsXxjg1kkQwPcRehNYZfaqjqGWLUWjiqYdPi3LrSIzQjj5Se5nbfFzRow49984e
+                mGxifA97omYF6/rM5nHpoN8tUnEr2umjo7qjJOfsLcvgYzLv/V2hnP86LbTZEk7jgNhhw
+                1WFdxPHbHSDXkXYA44xNJE3JB/XSf9t/kZYPlXm23WFTWy1LOUQ6uPvbpeRc1BfeI9l17KP
+                zl8lgIEIasn9EVt63WcA/njRUiMXO+dLOp2z7Oc0gggB/tMZZudEQi/NXpbEwJviBET6nlv
+                LmSfK3aA3xoA9dxHxn6hLKdk+OCgy0nki848p9JpzcnWs/zSqv+OifpKMIrpkQn7iABh9xND
+                S0bH7xNkMFq1NkoF6f5d9qRrkhiqAkP9z/wz8NdqaZv73cT+lKPybPOooAXvvHE04ZlJ6+8
+                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"
+                alt="image de Téléphones samsung Galaxy s25"
               />
             </div>
             <div class="c-product_infos">
               <div class="c-product_title">
-                <a href="#">Samsung Galaxy Z Flip 3</a>
+                <a href="#" tabindex="0"  aria-label="information supplimentaire duSamsung Galaxy S25 ">Samsung Galaxy S25</a>
               </div>
-              <div class="c-product_price">319,00€</div>
+              <div class="c-product_price" tabindex="0"  aria-details="prix du telephone est de 1800,00€ ">1800,00€</div>
             </div>
           </div>
         </div>
@@ -208,14 +282,67 @@
           <div class="c-product_inner">
             <div class="c-product_thumb">
               <img
-                src="data:image/webp;base64,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"
+                src="data:image/webp;base64,UklGRvgJAABXRUJQVlA4IOwJAABwMgC
+                dASqFAIUAPkkgjUUioiERyq6MKASEs4Bo2njB5udPqIu4wd/MDKj/kvXH3D
+                7XXAtZO7bT+V+qvHP/rfH3oCfn30PNBz1H7A/61f8bsDejB+0xevxo2Dl7l
+                eeNd8HnqtYaPdV6593lU8UV9I8oK9PJUTgSG/hX42nCtNxSVC2fxFs7VWSj
+                vVaY1uDz3PtgBM2VdWTDyOIjK9ygMcVYu9Gqy7y1ig6qaXOHcXJE2/54wsE8
+                BUUe+uDcHxq89TiLlu55AXhbeNugJtTHAEQvTj7yfBgPUu8U2ZKK/wqBj0S
+                4I5CMqeFNRgoEU5qaHBvnTw/mdDkcXkLMSIWROohoSM5o+1UxhcW65yROlCx
+                fPIOi2gOHtI3xvitxlSebiKglFb90x99D3AudLgoNb/Qt1TiT7jVAiy9TrEcM
+                3J7YV1tsC+0fdSbZMYrOKvL1ast/HGiSKMiGr0NVatoiU5b0NJDUiD0NamMPU
+                uF0fUbQOgmU0gJXKXQvLuvt6ebeSxIa2M5k09PmgG0abXJJm0YVEuxtpbpZX6s
+                b8KBAAP7/glN0QYnU5UIi2V7rsXxjg1kkQwPcRehNYZfaqjqGWLUWjiqYdPi3L
+                rSIzQjj5Se5nbfFzRow49984emGxifA97omYF6/rM5nHpoN8tUnEr2umjo7qjJ
+                OfsLcvgYzLv/V2hnP86LbTZEk7jgNhhw1WFdxPHbHSDXkXYA44xNJE3JB/XSf9t
+                /kZYPlXm23WFTWy1LOUQ6uPvbpeRc1BfeI9l17KPzl8lgIEIasn9EVt63WcA/
+                njRUiMXO+dLOp2z7Oc0gggB/tMZZudEQi/NXpbEwJviBET6nlvLmSfK3aA3xoA
+                9dxHxn6hLKdk+OCgy0nki848p9JpzcnWs/zSqv+OifpKMIrpkQn7iABh9xNDS0b
+                H7xNkMFq1NkoF6f5d9qRrkhiqAkP9z/wz8NdqaZv73cT+lKPybPOooAXvvHE04Z
+                lJ6+8Q37r/lujj3nfoCUG+ayyc/ac901mW+cGrhQwO/rSLDcfvc7K2dUBqPIxvy
+                tqq1pBrnDHLYOGyHlAg8IyPILzWRIxUgtexN5v+VebmDBu0zSlA4aYiphxcOTRt
+                fxvYAlMzPX6D+WsUOOfFdJ02dCg/8vZ/heD3H3HOvSApZQe4a/la7CpzNyH4y5KX
+                PgOfz1iv/nJKKE8qyyLA9Xj1CBk8D3oHSSaWgW03EgL9ECFE1pe2RCXbDZYDydkN
+                8kSEvVm2GBaBBC2BDRDh0P9AcQYnwO5G2B3zzOXhKZPSdL5sO5qrqBqgrH5C6Ua8
+                j3wCmhQ+UqJYWuvMXV2EWBD03FwnSv3KVEuumy6BTRqZaEDSdd0+TsIjLkRWWdkn5
+                kGkE8+071CocwXePn6VwsmxuqFFVzPmNQ2oeu+78YIxhOVcaMBIuAxamigEltcXr
+                B2SVZj7QPX+/wrrPBlNf8C/4c1jnyXDbKbzQV4slPnbMYmaVndfdOzNsS0EtuSSPPp
+                HxztO1vpIbk3nq2zu4Qg9R8cz/u1fpN3u2+P872XatgNUNo+clXIc3oGorzX4TVWAE
+                lAxWpPaDicyNUL/otL3Ia+vafXlfzXS7ZBx+lnghJvDVJvHpqfseOpfJ4nHFrR+oGS
+                5WsrFZT3YWiV4Yzm0nZBA8QJEbDxEu6aVqY/URN7a7xp6AP4mp6gLnH31grSbRAFWl
+                SK0nOpX8b5cKhQLQF56NqNyu+tiCwgfIuJdFpy//6R365gkWk/sAYESETv3vc9jjBOG
+                NdYsK0kUjYPMOIBqOwb+y81eqEGHpSyKze58DHJTRCEANoiWwJpGVNB8nRwe/pLKPQw
+                eKAQJF9YW+gG35F+FmB5pWGrdGq6hTNzAsfpvMtZUA+6B2SyRWozFH2Zo51Il1i/ByhD
+                GRXpR8DwLttD/FlaKVF//sDEK7qz0rH0WzlwjcpwooYBr/oEnSyeJ3OqMSUg5rWflJ/s8
+                ZF/HcbmwAl10+wBZkhUXqeEvOBDua//3ERBBQLNFOzVV/T/enuvC+zgB3btQfXvWDaN5B
+                8VID0Yl8iLGpnp/zkGqnvk6+V3919DMBBZs6vJXSjCBMWdaPELk3bp9K3UTSmf/sz+VP
+                GRIDASXVN0gNsQsYQFP2GSBtquk8zAGLlJCcqCsNXFrU5g7tQ8ZhlT1ZAfhIRfyx2ks2
+                W31SpqziqAfl7jYa8HKRNZnOdrZOs+d29ek7O1/5yqE5hwelW5qgR1QgkwbdUqEm7o1q
+                7DLnE3Y6ncuy/9is7RQByO6Y6DelTLVb4uPLtkWI3/9iT4qaiIzGOKxaMrTQDF5jYOj0W
+                BJk+LDMoepS9KvGcm4lzWMyL/2jt/OwK/WvMWGwi1wFUop3hPM/yQmqtMkfNIWFk8JWEJN
+                jg+Z7+jnbZ23z/pa4ZlBehmswwT7eHM5mt+mKe/37JmqGM7FlHH0bplIATor1t9vX+5iKg
+                JHWUrBZvk/rhOf32zu5fLyNifOMUtXwHUvaVwJyXWa9crNWO2L26/SJIwWJ7rsD5w9M8tw
+                V20TWUw0ePFJp0NnkUdliByNTGNHWPJWCgcxOF5d3mJWsYQnJqTJBkNgBbXchFaJPJ/Xqu
+                tXuIDV4XNt3Eu41kbNBlSz64hLZT30SGLAkC8FB9HPr/u8e/piq+cXNwpSzt+OPnT2yJ79
+                UgAv73xK6UgXBEZELN3Z0YDx6b7RgstgoogoO23ptS/JGKvZI5++tzPUz9smEyRlTbacQw
+                2cNo7+ufdjUJZSrv0l2kPEkZ/CxHQJBdb1wEgjaXX1wyqlZ4wKrMG/N7TQ2QnvTw142xfus
+                sewLy3+YEI/i5njKXYJ5PEZ39F8kmLUdVJzCyYs8FZnGhgelqbMZ+Mf6mzVV5Tx2DQ4yh7s
+                4wut5wXGl21+K1nY6K22m5ZP/KtlKpeGZkjSbakqsdTjTI4mB6s03gVf0jtxFMlEcmceLsh
+                haUcquL6KznZOHEzZQBhe1ZLFJnzqrY2hqrxf+inxosrhZEbgpS517ZLC8RoaQcIVCka1c
+                mTXDzD1DxzSipthT5YeCA6+r7GT+Ljm0ZbXLZKaquRX/PGk0F8VOvYL2yeD8vUm7Bm5tof
+                UgUKvx2DOwDLJxIAh0zqHABDIwNtjxJxKTu2pSWGRpDq9SgShDNN6V03pOqxs0hCYz1coYQ
+                GU2g/3sQYBWbWe6vDlXboLNT2B40SRVl8KpOhNhLi3WQ1tqwTacQOl9ITSMQ4msdaI51m18h
+                dQADlCBNIpn/9J0JqlO3/LjEtxfPedcZmtr6UBvGtu4QBEOK2A0ZPqhDrOeL1IMMeczZcBd/
+                +3KeKVD75AARYZjVYDXrf+NfuSn48gzeWMRwdwL9rWdK85Xm4PCJjF3iuu/Cne2gdGfN+Gpi
+                sC/HTewcpduMktw/NAAAAAA=="
+                alt="image de Téléphones samsung Galaxy S25"
               />
             </div>
             <div class="c-product_infos">
               <div class="c-product_title">
-                <a href="#">Samsung Galaxy S25</a>
+                <a href="#"  aria-label="information supplimentaire duSamsung Galaxy S25 ">Samsung Galaxy S25</a>
               </div>
-              <div class="c-product_price">1800,00€</div>
+              <div class="c-product_price" tabindex="0"  aria-details="prix du telephone est de 1800,00€ ">1800,00€</div>
             </div>
           </div>
         </div>
@@ -223,29 +350,66 @@
           <div class="c-product_inner">
             <div class="c-product_thumb">
               <img
-                src="data:image/webp;base64,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"
+                src="data:image/webp;base64,UklGRvgJAABXRUJQVlA4IOwJAABwMgCdAS
+                qFAIUAPkkgjUUioiERyq6MKASEs4Bo2njB5udPqIu4wd/MDKj/kvXH3D7XXAtZ
+                O7bT+V+qvHP/rfH3oCfn30PNBz1H7A/61f8bsDejB+0xevxo2Dl7leeNd8HnqtYa
+                PdV6593lU8UV9I8oK9PJUTgSG/hX42nCtNxSVC2fxFs7VWSjvVaY1uDz3PtgBM2
+                VdWTDyOIjK9ygMcVYu9Gqy7y1ig6qaXOHcXJE2/54wsE8BUUe+uDcHxq89TiLlu5
+                5AXhbeNugJtTHAEQvTj7yfBgPUu8U2ZKK/wqBj0S4I5CMqeFNRgoEU5qaHBvnTw
+                /mdDkcXkLMSIWROohoSM5o+1UxhcW65yROlCxfPIOi2gOHtI3xvitxlSebiKglFb9
+                0x99D3AudLgoNb/Qt1TiT7jVAiy9TrEcM3J7YV1tsC+0fdSbZMYrOKvL1ast/HGiS
+                KMiGr0NVatoiU5b0NJDUiD0NamMPUuF0fUbQOgmU0gJXKXQvLuvt6ebeSxIa2M5k09
+                PmgG0abXJJm0YVEuxtpbpZX6sb8KBAAP7/glN0QYnU5UIi2V7rsXxjg1kkQwPcRehN
+                YZfaqjqGWLUWjiqYdPi3LrSIzQjj5Se5nbfFzRow49984emGxifA97omYF6/rM5nHpo
+                N8tUnEr2umjo7qjJOfsLcvgYzLv/V2hnP86LbTZEk7jgNhhw1WFdxPHbHSDXkXYA44x
+                NJE3JB/XSf9t/kZYPlXm23WFTWy1LOUQ6uPvbpeRc1BfeI9l17KPzl8lgIEIasn9EVt
+                63WcA/njRUiMXO+dLOp2z7Oc0gggB/tMZZudEQi/NXpbEwJviBET6nlvLmSfK3aA3xo
+                A9dxHxn6hLKdk+OCgy0nki848p9JpzcnWs/zSqv+OifpKMIrpkQn7iABh9xNDS0bH7x
+                NkMFq1NkoF6f5d9qRrkhiqAkP9z/wz8NdqaZv73cT+lKPybPOooAXvvHE04ZlJ6+8Q3
+                7r/lujj3nfoCUG+ayyc/ac901mW+cGrhQwO/rSLDcfvc7K2dUBqPIxvytqq1pBrnDHL
+                YOGyHlAg8IyPILzWRIxUgtexN5v+VebmDBu0zSlA4aYiphxcOTRtfxvYAlMzPX6D+Ws
+                UOOfFdJ02dCg/8vZ/heD3H3HOvSApZQe4a/la7CpzNyH4y5KXPgOfz1iv/nJKKE8qyy
+                LA9Xj1CBk8D3oHSSaWgW03EgL9ECFE1pe2RCXbDZYDydkN8kSEvVm2GBaBBC2BDRDh0
+                P9AcQYnwO5G2B3zzOXhKZPSdL5sO5qrqBqgrH5C6Ua8j3wCmhQ+UqJYWuvMXV2EWBD0
+                3FwnSv3KVEuumy6BTRqZaEDSdd0+TsIjLkRWWdkn5kGkE8+071CocwXePn6VwsmxuqF
+                FVzPmNQ2oeu+78YIxhOVcaMBIuAxamigEltcXrB2SVZj7QPX+/wrrPBlNf8C/4c1jny
+                XDbKbzQV4slPnbMYmaVndfdOzNsS0EtuSSPPpHxztO1vpIbk3nq2zu4Qg9R8cz/u1fp
+                N3u2+P872XatgNUNo+clXIc3oGorzX4TVWAElAxWpPaDicyNUL/otL3Ia+vafXlfzXS
+                7ZBx+lnghJvDVJvHpqfseOpfJ4nHFrR+oGS5WsrFZT3YWiV4Yzm0nZBA8QJEbDxEu6a
+                VqY/URN7a7xp6AP4mp6gLnH31grSbRAFWlSK0nOpX8b5cKhQLQF56NqNyu+tiCwgfIu
+                JdFpy//6R365gkWk/sAYESETv3vc9jjBOGNdYsK0kUjYPMOIBqOwb+y81eqEGHpSyKz
+                e58DHJTRCEANoiWwJpGVNB8nRwe/pLKPQweKAQJF9YW+gG35F+FmB5pWGrdGq6hTNzA
+                sfpvMtZUA+6B2SyRWozFH2Zo51Il1i/ByhDGRXpR8DwLttD/FlaKVF//sDEK7qz0rH0
+                WzlwjcpwooYBr/oEnSyeJ3OqMSUg5rWflJ/s8ZF/HcbmwAl10+wBZkhUXqeEvOBDua/
+                /3ERBBQLNFOzVV/T/enuvC+zgB3btQfXvWDaN5B8VID0Yl8iLGpnp/zkGqnvk6+V391
+                9DMBBZs6vJXSjCBMWdaPELk3bp9K3UTSmf/sz+VPGRIDASXVN0gNsQsYQFP2GSBtquk
+                8zAGLlJCcqCsNXFrU5g7tQ8ZhlT1ZAfhIRfyx2ks2W31SpqziqAfl7jYa8HKRNZnOdr
+                ZOs+d29ek7O1/5yqE5hwelW5qgR1QgkwbdUqEm7o1q7DLnE3Y6ncuy/9is7RQByO6Y6
+                DelTLVb4uPLtkWI3/9iT4qaiIzGOKxaMrTQDF5jYOj0WBJk+LDMoepS9KvGcm4lzWMy
+                L/2jt/OwK/WvMWGwi1wFUop3hPM/yQmqtMkfNIWFk8JWEJNjg+Z7+jnbZ23z/pa4ZlB
+                ehmswwT7eHM5mt+mKe/37JmqGM7FlHH0bplIATor1t9vX+5iKgJHWUrBZvk/rhOf32z
+                u5fLyNifOMUtXwHUvaVwJyXWa9crNWO2L26/SJIwWJ7rsD5w9M8twV20TWUw0ePFJp0N
+                nkUdliByNTGNHWPJWCgcxOF5d3mJWsYQnJqTJBkNgBbXchFaJPJ/XqutXuIDV4XNt3Eu
+                41kbNBlSz64hLZT30SGLAkC8FB9HPr/u8e/piq+cXNwpSzt+OPnT2yJ79UgAv73xK6Ug
+                XBEZELN3Z0YDx6b7RgstgoogoO23ptS/JGKvZI5++tzPUz9smEyRlTbacQw2cNo7+ufd
+                jUJZSrv0l2kPEkZ/CxHQJBdb1wEgjaXX1wyqlZ4wKrMG/N7TQ2QnvTw142xfussewLy3
+                +YEI/i5njKXYJ5PEZ39F8kmLUdVJzCyYs8FZnGhgelqbMZ+Mf6mzVV5Tx2DQ4yh7s4wu
+                t5wXGl21+K1nY6K22m5ZP/KtlKpeGZkjSbakqsdTjTI4mB6s03gVf0jtxFMlEcmceLsh
+                haUcquL6KznZOHEzZQBhe1ZLFJnzqrY2hqrxf+inxosrhZEbgpS517ZLC8RoaQcIVCka
+                1cmTXDzD1DxzSipthT5YeCA6+r7GT+Ljm0ZbXLZKaquRX/PGk0F8VOvYL2yeD8vUm7Bm
+                5tofUgUKvx2DOwDLJxIAh0zqHABDIwNtjxJxKTu2pSWGRpDq9SgShDNN6V03pOqxs0hC
+                Yz1coYQGU2g/3sQYBWbWe6vDlXboLNT2B40SRVl8KpOhNhLi3WQ1tqwTacQOl9ITSMQ4
+                msdaI51m18hdQADlCBNIpn/9J0JqlO3/LjEtxfPedcZmtr6UBvGtu4QBEOK2A0ZPqhDr
+                OeL1IMMeczZcBd/+3KeKVD75AARYZjVYDXrf+NfuSn48gzeWMRwdwL9rWdK85Xm4PCJj
+                F3iuu/Cne2gdGfN+GpisC/HTewcpduMktw/NAAAAAA=="
+                alt="image de Téléphones samsung Galaxy A55"
               />
             </div>
             <div class="c-product_infos">
-              <div class="c-product_title">
-                <a href="#">Samsung Galaxy S25</a>
+              <div class="c-product_title" >
+                <a href="#" tabindex="0"  aria-label="information supplimentaire duSamsung Galaxy S25 ">Samsung Galaxy S25</a>
               </div>
-              <div class="c-product_price">1800,00€</div>
-            </div>
-          </div>
-        </div>
-        <div class="c-product">
-          <div class="c-product_inner">
-            <div class="c-product_thumb">
-              <img
-                src="data:image/webp;base64,UklGRvgJAABXRUJQVlA4IOwJAABwMgCdASqFAIUAPkkgjUUioiERyq6MKASEs4Bo2njB5udPqIu4wd/MDKj/kvXH3D7XXAtZO7bT+V+qvHP/rfH3oCfn30PNBz1H7A/61f8bsDejB+0xevxo2Dl7leeNd8HnqtYaPdV6593lU8UV9I8oK9PJUTgSG/hX42nCtNxSVC2fxFs7VWSjvVaY1uDz3PtgBM2VdWTDyOIjK9ygMcVYu9Gqy7y1ig6qaXOHcXJE2/54wsE8BUUe+uDcHxq89TiLlu55AXhbeNugJtTHAEQvTj7yfBgPUu8U2ZKK/wqBj0S4I5CMqeFNRgoEU5qaHBvnTw/mdDkcXkLMSIWROohoSM5o+1UxhcW65yROlCxfPIOi2gOHtI3xvitxlSebiKglFb90x99D3AudLgoNb/Qt1TiT7jVAiy9TrEcM3J7YV1tsC+0fdSbZMYrOKvL1ast/HGiSKMiGr0NVatoiU5b0NJDUiD0NamMPUuF0fUbQOgmU0gJXKXQvLuvt6ebeSxIa2M5k09PmgG0abXJJm0YVEuxtpbpZX6sb8KBAAP7/glN0QYnU5UIi2V7rsXxjg1kkQwPcRehNYZfaqjqGWLUWjiqYdPi3LrSIzQjj5Se5nbfFzRow49984emGxifA97omYF6/rM5nHpoN8tUnEr2umjo7qjJOfsLcvgYzLv/V2hnP86LbTZEk7jgNhhw1WFdxPHbHSDXkXYA44xNJE3JB/XSf9t/kZYPlXm23WFTWy1LOUQ6uPvbpeRc1BfeI9l17KPzl8lgIEIasn9EVt63WcA/njRUiMXO+dLOp2z7Oc0gggB/tMZZudEQi/NXpbEwJviBET6nlvLmSfK3aA3xoA9dxHxn6hLKdk+OCgy0nki848p9JpzcnWs/zSqv+OifpKMIrpkQn7iABh9xNDS0bH7xNkMFq1NkoF6f5d9qRrkhiqAkP9z/wz8NdqaZv73cT+lKPybPOooAXvvHE04ZlJ6+8Q37r/lujj3nfoCUG+ayyc/ac901mW+cGrhQwO/rSLDcfvc7K2dUBqPIxvytqq1pBrnDHLYOGyHlAg8IyPILzWRIxUgtexN5v+VebmDBu0zSlA4aYiphxcOTRtfxvYAlMzPX6D+WsUOOfFdJ02dCg/8vZ/heD3H3HOvSApZQe4a/la7CpzNyH4y5KXPgOfz1iv/nJKKE8qyyLA9Xj1CBk8D3oHSSaWgW03EgL9ECFE1pe2RCXbDZYDydkN8kSEvVm2GBaBBC2BDRDh0P9AcQYnwO5G2B3zzOXhKZPSdL5sO5qrqBqgrH5C6Ua8j3wCmhQ+UqJYWuvMXV2EWBD03FwnSv3KVEuumy6BTRqZaEDSdd0+TsIjLkRWWdkn5kGkE8+071CocwXePn6VwsmxuqFFVzPmNQ2oeu+78YIxhOVcaMBIuAxamigEltcXrB2SVZj7QPX+/wrrPBlNf8C/4c1jnyXDbKbzQV4slPnbMYmaVndfdOzNsS0EtuSSPPpHxztO1vpIbk3nq2zu4Qg9R8cz/u1fpN3u2+P872XatgNUNo+clXIc3oGorzX4TVWAElAxWpPaDicyNUL/otL3Ia+vafXlfzXS7ZBx+lnghJvDVJvHpqfseOpfJ4nHFrR+oGS5WsrFZT3YWiV4Yzm0nZBA8QJEbDxEu6aVqY/URN7a7xp6AP4mp6gLnH31grSbRAFWlSK0nOpX8b5cKhQLQF56NqNyu+tiCwgfIuJdFpy//6R365gkWk/sAYESETv3vc9jjBOGNdYsK0kUjYPMOIBqOwb+y81eqEGHpSyKze58DHJTRCEANoiWwJpGVNB8nRwe/pLKPQweKAQJF9YW+gG35F+FmB5pWGrdGq6hTNzAsfpvMtZUA+6B2SyRWozFH2Zo51Il1i/ByhDGRXpR8DwLttD/FlaKVF//sDEK7qz0rH0WzlwjcpwooYBr/oEnSyeJ3OqMSUg5rWflJ/s8ZF/HcbmwAl10+wBZkhUXqeEvOBDua//3ERBBQLNFOzVV/T/enuvC+zgB3btQfXvWDaN5B8VID0Yl8iLGpnp/zkGqnvk6+V3919DMBBZs6vJXSjCBMWdaPELk3bp9K3UTSmf/sz+VPGRIDASXVN0gNsQsYQFP2GSBtquk8zAGLlJCcqCsNXFrU5g7tQ8ZhlT1ZAfhIRfyx2ks2W31SpqziqAfl7jYa8HKRNZnOdrZOs+d29ek7O1/5yqE5hwelW5qgR1QgkwbdUqEm7o1q7DLnE3Y6ncuy/9is7RQByO6Y6DelTLVb4uPLtkWI3/9iT4qaiIzGOKxaMrTQDF5jYOj0WBJk+LDMoepS9KvGcm4lzWMyL/2jt/OwK/WvMWGwi1wFUop3hPM/yQmqtMkfNIWFk8JWEJNjg+Z7+jnbZ23z/pa4ZlBehmswwT7eHM5mt+mKe/37JmqGM7FlHH0bplIATor1t9vX+5iKgJHWUrBZvk/rhOf32zu5fLyNifOMUtXwHUvaVwJyXWa9crNWO2L26/SJIwWJ7rsD5w9M8twV20TWUw0ePFJp0NnkUdliByNTGNHWPJWCgcxOF5d3mJWsYQnJqTJBkNgBbXchFaJPJ/XqutXuIDV4XNt3Eu41kbNBlSz64hLZT30SGLAkC8FB9HPr/u8e/piq+cXNwpSzt+OPnT2yJ79UgAv73xK6UgXBEZELN3Z0YDx6b7RgstgoogoO23ptS/JGKvZI5++tzPUz9smEyRlTbacQw2cNo7+ufdjUJZSrv0l2kPEkZ/CxHQJBdb1wEgjaXX1wyqlZ4wKrMG/N7TQ2QnvTw142xfussewLy3+YEI/i5njKXYJ5PEZ39F8kmLUdVJzCyYs8FZnGhgelqbMZ+Mf6mzVV5Tx2DQ4yh7s4wut5wXGl21+K1nY6K22m5ZP/KtlKpeGZkjSbakqsdTjTI4mB6s03gVf0jtxFMlEcmceLshhaUcquL6KznZOHEzZQBhe1ZLFJnzqrY2hqrxf+inxosrhZEbgpS517ZLC8RoaQcIVCka1cmTXDzD1DxzSipthT5YeCA6+r7GT+Ljm0ZbXLZKaquRX/PGk0F8VOvYL2yeD8vUm7Bm5tofUgUKvx2DOwDLJxIAh0zqHABDIwNtjxJxKTu2pSWGRpDq9SgShDNN6V03pOqxs0hCYz1coYQGU2g/3sQYBWbWe6vDlXboLNT2B40SRVl8KpOhNhLi3WQ1tqwTacQOl9ITSMQ4msdaI51m18hdQADlCBNIpn/9J0JqlO3/LjEtxfPedcZmtr6UBvGtu4QBEOK2A0ZPqhDrOeL1IMMeczZcBd/+3KeKVD75AARYZjVYDXrf+NfuSn48gzeWMRwdwL9rWdK85Xm4PCJjF3iuu/Cne2gdGfN+GpisC/HTewcpduMktw/NAAAAAA=="
-              />
-            </div>
-            <div class="c-product_infos">
-              <div class="c-product_title">
-                <a href="#">Samsung Galaxy S25</a>
-              </div>
-              <div class="c-product_price">1800,00€</div>
+              <div class="c-product_price" tabindex="0"  aria-details="prix du telephone est de 1800,00€ ">1800,00€</div>
             </div>
           </div>
         </div>
