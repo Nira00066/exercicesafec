@@ -14,7 +14,7 @@ if (isNaN(age)) {
     alert("Tu dois au moins acheter un ticket !");
   }
 
-
+// Petit proble dans le rappel ici je comprens pas 
   
 // exo bonus 1   
 
