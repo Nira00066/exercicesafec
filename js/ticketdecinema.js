@@ -1,4 +1,4 @@
-let name = prompt("Quel est ton prénom et ton nom ?");
+let nameComplet = prompt("Quel est ton prénom et ton nom ?");
 let age = parseInt(prompt("Quel est ton âge ?"));
 // let Etudiant = prompt("Es-tu étudiant ? (oui/non)").toLowerCase() === "oui";
 let nombreTickets = parseInt(prompt("Combien de tickets veux-tu acheter ?"));
@@ -54,14 +54,14 @@ if (nombreTickets > 3) {
 }
 
 // Étape 5
-let tableauNom = name.split(" ");
+let tableauNom = nameComplet.split(" ");
 let prenom = tableauNom[0];
 let nom = tableauNom[1];
 let longueurPrenom = prenom.length;
 let deuxPremieresLettres = nom.slice(0, 2).toUpperCase();
  
 // Étape 6 
-let message = "Bonjour " + name + ", ton nom commence par " + deuxPremieresLettres + ", tu as " + age + " ans et tu paies " + prixApresReductionPrincipale.toFixed(2) + " € pour " + nombreTickets + " tickets.";
+let message = "Bonjour " + nameComplet + ", ton nom commence par " + deuxPremieresLettres + ", tu as " + age + " ans et tu paies " + prixApresReductionPrincipale.toFixed(2) + " € pour " + nombreTickets + " tickets.";
 alert(message);
 
 
