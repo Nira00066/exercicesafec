@@ -113,39 +113,12 @@ function machineABonbon() {
   while (messageBonbon >= prixBonbon) {
     messageBonbon -= prixBonbon;
     bonbon++;
-    alert("Vous avez acheté " + bonbon + " bonbons.");
-    alert("Il vous reste " + messageBonbon + " euros.");
+    console.log("Bonbon distribué!");
+    console.log("Il vous reste " + messageBonbon + " euros.");
   }
   if (messageBonbon < prixBonbon) {
-    alert("Crédits insuffisants pour acheter un bonbon.");
+    console.log("Crédits insuffisants. Opération terminée. ");
   }
 }
 
-// machineABonbon();
-
-function marchinebonbon() {
-//   let message = Number(
-//     prompt("Combien d'argent avez-vous mis dans la machine?")
-//   );
-  let message=6
-  let prix = 2;
-
-  for (let bonbon = 0; bonbon < message; bonbon++) {
-    console.log(message);
-
-
-    if (message > prix) {
-      message -= prix;
-  
-      console.log("Bonbon distribué!");
-      console.log("Il vous reste " + message + " euros.");
-    }  
-
-}
-
-
-console.log("Crédits insuffisants pour acheter un bonbon.");
-  
-}
-
-marchinebonbon();
+machineABonbon();
