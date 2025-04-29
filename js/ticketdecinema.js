@@ -53,8 +53,8 @@ if (nombreTickets > 3) {
   prixApresReductionPrincipale *= 0.9;
 }
 
-// Étape 5 nina lopez
-let tableauNom = nameComplet.split(" ");
+// Étape 5
+let tableauNom = name.split(" ");
 let prenom = tableauNom[0];
 let nom = tableauNom[1];
 let longueurPrenom = prenom.length;

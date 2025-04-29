@@ -143,3 +143,108 @@ Cet exercice a permis de pratiquer :
     L’affichage dynamique
 
 Et surtout, d'apprendre en faisant des erreurs et en les corrigeant comme une vraie dev 🔥
+
+
+
+📚 Synthèse : Mes Premières Fonctions en JavaScript
+Introduction
+
+Dans cet exercice, j'ai créé plusieurs fonctions simples pour m'entraîner aux bases de JavaScript :
+
+    Déclaration de fonctions
+
+    Utilisation de paramètres
+
+    Utilisation de return pour renvoyer des valeurs
+
+    Utilisation de console.log pour afficher des résultats
+
+    Maîtrise des conditions if/else
+
+📌 Fonctions réalisées
+1. saluerUtilisateur(prenom)
+
+Fonction qui prend un prénom en paramètre et affiche un message personnalisé dans la console.
+
+function saluerUtilisateur(prenom) {
+    console.log(`Bonjour ${prenom} !`);
+}
+
+// Exemples d'appels :
+saluerUtilisateur('Nina');
+saluerUtilisateur('Alex');
+
+2. addition(a, b)
+
+Fonction qui prend deux nombres en paramètres, retourne leur somme, et affiche le résultat dans la console.
+
+function addition(a, b) {
+    return a + b;
+}
+
+// Exemple d'utilisation :
+console.log(addition(4, 5)); // Affiche 9
+
+3. estPair(nombre)
+
+Fonction qui prend un nombre en paramètre et retourne true si le nombre est pair, false sinon.
+
+function estPair(nombre) {
+    return nombre % 2 === 0;
+}
+
+// Exemples de tests :
+console.log(estPair(4)); // true
+console.log(estPair(7)); // false
+
+4. calculerMoyenne(note1, note2, note3)
+
+Fonction qui calcule et retourne la moyenne de trois notes.
+
+function calculerMoyenne(note1, note2, note3) {
+    return (note1 + note2 + note3) / 3;
+}
+
+// Exemple d'utilisation :
+console.log(calculerMoyenne(10, 15, 20)); // 15
+
+5. plusGrand(a, b)
+
+Fonction qui prend deux nombres en paramètres et retourne le plus grand des deux.
+
+function plusGrand(a, b) {
+    if (a > b) {
+        return a;
+    } else {
+        return b;
+    }
+}
+
+// Exemples de tests :
+console.log(plusGrand(10, 5)); // 10
+console.log(plusGrand(3, 8));  // 8
+console.log(plusGrand(7, 7));  // 7
+
+🚀 Compétences utilisées :
+
+    Utilisation de function, return, console.log
+
+    Gestion des paramètres
+
+    Maîtrise des opérateurs (%, +, >)
+
+    Écriture de conditions avec if/else
+
+    Respect de l'ordre des opérations en JavaScript
+
+🔥 Conclusion
+
+Ces exercices m'ont permis de :
+
+    Bien comprendre comment fonctionnent les fonctions.
+
+    Savoir comment traiter et manipuler des valeurs en JavaScript.
+
+    Gagner en logique et en vitesse d'écriture.
+
+Prochaine étape ➔ m'entraîner avec des fonctions un peu plus complexes ! 🚀
