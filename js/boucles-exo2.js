@@ -128,13 +128,12 @@ function marchinebonbon() {
 //     prompt("Combien d'argent avez-vous mis dans la machine?")
 //   );
   let message=6
-
   let prix = 2;
 
   for (let bonbon = 0; bonbon < message; bonbon++) {
     console.log(message);
 
-    
+
     if (message > prix) {
       message -= prix;
   
