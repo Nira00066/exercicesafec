@@ -66,5 +66,8 @@ function copierTexte() {
   );
 }
 
+
+// Pour que l'animation fonction je dois le crée quand on change 
+
 // function partager() {}
 
