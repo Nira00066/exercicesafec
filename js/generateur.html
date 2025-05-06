@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Génerateur de citation</title>
+  </head>
+  <body>
+    <div id="citation" class="container">
+      <!-- Ajoute plus tard de fade-in -->
+      <div class="titre">
+          <h1>Citation Inspirante</h1>
+
+      </div>
+      <p id="texte" class="text"></p>
+    
+      <button onclick="genererCitation()" class="btn">Nouvelle citation</button>
+        <button onclick="copierTexte()" class="btn">Copier la citation</button>
+        <!-- <button onclick="partager()">Tweeter cette citations </button> -->
+    </div>
+
+    <script src="generateur.js"></script>
+    <style>
+.container {
+    align-items: center;
+    margin: auto;
+    text-align: center;
+    padding: 40px;
+    margin-top: 20%;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+.btn { 
+    border-radius: 10px;
+    background-color: gray; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    width: 200px;
+    height: 50px;
+}
+.text {
+    animation: fade 5s ease-in-out;
+    font-size: 20px;
+    font-weight: bold;
+}
+@kayframes fade-in {
+    0% { opacity: 0; },
+    100% { opacity: 1; },
+}
+    </style>
+  </body>
+</html>

@@ -50,7 +50,7 @@ filmContainer.innerHTML = `
     <p>Note : ${film.note ? film.note : "Non noté"}</p>
 `;	
 
-
+ let films = [];
 function addFilm() {
     let titre = prompt("Titre du film :");
     let realisateur = prompt("Réalisateur :");
