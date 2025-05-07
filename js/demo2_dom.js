@@ -1,13 +1,15 @@
 function ajouterObjet() {
   const select = document.getElementById("objetSelect");
   const objetChoisi = select.options[select.selectedIndex].text;
-  const nomObjet = document.createElement("span");
+  
+  const nomObjet = document.createElement("div");
   nomObjet.textContent = objetChoisi;
 
   const btnSupprimer = document.createElement("button");
   btnSupprimer.textContent = "Supprimer";
   btnSupprimer.onclick = () => divObjet.remove();
 
+  
   const btnDeplacer = document.createElement("button");
   btnDeplacer.textContent = "Déplacer";
   btnDeplacer.onclick = () => {
@@ -18,10 +20,12 @@ function ajouterObjet() {
       sac.insertBefore(divObjet, sac.firstChild); // sinon remet en haut
     }
   };
+  
 
-  divObjet.appendChild(nomObjet);
-  divObjet.appendChild(btnSupprimer);
-  divObjet.appendChild(btnDeplacer);s
-
-  document.getElementById("sacZone").appendChild(divObjet);
+  document.getElementById("sac").appendChild(divObjet);
+  
+  return;
+  // divObjet.appendChild(nomObjet);
+  // divObjet.appendChild(btnSupprimer);
+  // divObjet.appendChild(btnDeplacer);
 }
