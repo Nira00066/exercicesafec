@@ -1,31 +1,48 @@
 function ajouterObjet() {
   const select = document.getElementById("objetSelect");
-  const objetChoisi = select.options[select.selectedIndex].text;
-  
+  // Prendre le parents pour obtenir les enfants
+  console.log(select);
+
+  let sac = document.getElementById("sac");
+  // reconnaitre la zone sac comme ca il apparet directement a lui
+  const objetChoisi = select.value;
+
   const nomObjet = document.createElement("div");
-  nomObjet.textContent = objetChoisi;
+  console.log(nomObjet);
+
+  console.log(objetChoisi);
+
+  nomObjet.innerText = objetChoisi;
+  // Met ton objet avec ton select et btn
 
   const btnSupprimer = document.createElement("button");
   btnSupprimer.textContent = "Supprimer";
-  btnSupprimer.onclick = () => divObjet.remove();
 
-  
+  btnSupprimer.addEventListener("click", function () {
+    nomObjet.remove();
+  });
+
   const btnDeplacer = document.createElement("button");
-  btnDeplacer.textContent = "Déplacer";
-  btnDeplacer.onclick = () => {
-    const sac = document.getElementById("camp");
-    if (divObjet.nextSibling) {
-      sac.insertBefore(divObjet.nextSibling, divObjet); // échange avec le suivant
+  btnDeplacer.textContent = "Deplacer";
+  btnDeplacer.addEventListener("click", function () {
+    const camp = document.getElementById("camp");
+// parent element permet de voir ou est l'enfant 
+    if (nomObjet.parentElement === sac) {
+      // échange avec le suivant;
+      console.log("piou");
+      camp.appendChild(nomObjet);
     } else {
-      sac.insertBefore(divObjet, sac.firstChild); // sinon remet en haut
+      sac.appendChild(nomObjet);
+      // sinon remet en haut
+      console.log("pioupiou");
     }
-  };
-  
+  });
 
-  document.getElementById("sac").appendChild(divObjet);
-  
-  return;
-  // divObjet.appendChild(nomObjet);
-  // divObjet.appendChild(btnSupprimer);
-  // divObjet.appendChild(btnDeplacer);
+
+  // Ajout des boutons à l'objet
+  nomObjet.appendChild(btnSupprimer);
+  nomObjet.appendChild(btnDeplacer);
+
+  // le faire apparaitre dans la zone 1 qui est sac a dos
+  sac.append(nomObjet);
 }
