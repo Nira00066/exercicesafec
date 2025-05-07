@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Change Color</title>
+</head>
+<body>
+
+  <h1 id="myTitle">Hello World</h1>
+  <button id="colorBtn">Change Color</button>
+
+  <script>
+    const colors = ["red", "blue", "green", "purple", "orange"];
+    let currentIndex = 0;
+
+    const title = document.getElementById("myTitle");
+    const btn = document.getElementById("colorBtn");
+
+    btn.addEventListener("click", () => {
+      title.style.color = colors[currentIndex];
+      currentIndex++;
+
+      if (currentIndex >= colors.length) {
+        currentIndex = 0; // Repart à zéro quand on a atteint la fin
+      }
+    });
+  </script>
+
+</body>
+</html>

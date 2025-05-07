@@ -56,3 +56,11 @@ document.getElementById('ajouter').addEventListener('click', () => {
   console.log('NodeList :', nodeList.length);             // ne change pas
 });
 
+let colors = [ "red", "blue","yellow", "green"];
+
+function changerColorText(){
+  let text = document.querySelector('h1');
+  for(i=0; i < colors.length ; i++){
+    
+  }
+}
