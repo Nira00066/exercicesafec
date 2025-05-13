@@ -26,24 +26,49 @@ function changeColor() {
 }
 // exo 3
 
-
 window.onload = function () {
   changeColor();
   action();
-  actionClik();
+  actionClick();
+  AjouterPara();
 };
 
-
-// exo 3 et 4  et de faire un btn click avec le compteur et lexo et que le compteur s'arrete a  3
-let count =0;
-
+// exo 4 et 5  et de faire un btn click avec le compteur et lexo et que le compteur s'arrete a  3
+let count = 0;
 
 function actionClick() {
   if (count < 3) {
     count++;
     document.getElementById("compteur").textContent = count;
   } else {
-    alert("T'as déjà cliqué 3 fois, calme-toi 😅");
+    // alert("T'as déjà cliqué 3 fois, calme-toi 😅");
+    disabled = true;
   }
 }
 
+// exo 6
+
+
+const btnadd = document.getElementById('Addpara');
+
+btnadd.addEventListener("click", function() {
+  let text = document.createElement("p");
+  text.textContent = "Il était une fois";
+
+const btnSupprimer = document.createElement("button");
+  btnSupprimer.textContent = "Supprimer";
+
+  btnSupprimer.addEventListener("click", function () {
+  container.remove();
+  });
+  let container = document.createElement("div");
+  container.appendChild(text);
+
+
+  const idDiv = document.getElementById('bloc');
+  container.appendChild(btnSupprimer);
+  idDiv.appendChild(container);
+
+
+});
+// Alors pour resumer appendChild met l'element un dans le suivant 
