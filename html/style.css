@@ -1,0 +1,12 @@
+.accordion__answer-bloc {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+
+.accordion__bloc.active .caret-down {
+  transform: rotate(180deg);
+  transition: transform 0.3s;
+}
+
+
