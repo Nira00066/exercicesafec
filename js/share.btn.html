@@ -1,0 +1,144 @@
+<button id="openShareModal">Partager cet article</button>
+<!-- <div class="modal__overlay" data-close="true"></div>
+<div class="modal" id="shareModal" aria-hidden="true">
+  <div class="modal__content" role="dialog" aria-modal="true">
+    <button class="modal__close" aria-label="Fermer" data-close="true">
+      &times;
+    </button>
+    <h2>Partager cette page</h2>
+    <ul>
+      <li>
+        <a href="#" class="share-link" data-network="facebook">Facebook</a>
+      </li>
+      <li><a href="#" class="share-link" data-network="twitter">Twitter</a></li>
+      <li>
+        <a href="#" class="share-link" data-network="linkedin">LinkedIn</a>
+      </li>
+    </ul>
+  </div>
+</div> -->
+<script>
+  let btnShare = document.getElementById("openShareModal");
+  btnShare.addEventListener("click", function () {
+    let overlay = document.createElement("div");
+    overlay.className = "modal__overlay";
+    overlay.dataset.close = "true";
+
+    const modal = document.createElement("div");
+    modal.setAttribute("aria-hidden", "true");
+    modal.id = "ShareModal";
+    modal.ariaHidden = "true";
+    modal.style.zIndex = 10;
+
+    const modal__content = document.createElement("div");
+    modal__content.className = "modal__content";
+    modal__content.setAttribute("role", "dialog");
+    modal__content.setAttribute("aria-modal", "true");
+
+    console.log(modal__content);
+    modal.appendChild(modal__content);
+
+    const btnClose = document.createElement("button");
+    btnClose.className = "modal__close";
+    btnClose.setAttribute("aria-label", "Fermer");
+    btnClose.dataset.close = "true";
+    btnClose.textContent = "&times;";
+
+    btnClose.addEventListener("click", function () {
+      modal.remove(); // Supprime le modal
+      overlay.remove();
+      console.log(modal__content);
+    });
+
+    modal__content.appendChild(btnClose);
+
+    let titre = document.createElement("h2");
+    titre.textContent = "Partager cette page";
+
+    modal__content.appendChild(titre);
+
+    const currentUrl = encodeURIComponent(window.location.href);
+    const urls = {
+      facebook: `https://www.facebook.com/sharer/sharer.php?u=${currentUrl}`,
+      twitter: `https://twitter.com/intent/tweet?url=${currentUrl}`,
+      linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${currentUrl}`,
+    };
+
+    // Créer la <ul>
+    const ul = document.createElement("ul");
+
+    // Boucle sur chaque réseau
+    // En gros pour chaque url et reseau il va boucles
+    Object.entries(urls).forEach(([reseau, url]) => {
+      const li = document.createElement("li");
+      const a = document.createElement("a");
+
+      a.href = url;
+      a.className = "share-link";
+      a.dataset.network = reseau;
+      a.textContent = reseau.charAt(0).toUpperCase() + reseau.slice(1);
+      a.target = "_blank"; // Pour ouvrir dans un nouvel onglet
+
+      li.appendChild(a);
+      ul.appendChild(li);
+    });
+
+    // Ajouter le <ul> dans le body ou une div spécifique
+    modal__content.appendChild(ul);
+    document.body.appendChild(modal);
+    document.body.appendChild(overlay); // ✅ OUI
+  });
+</script>
+<style>
+  .modal {
+    position: fixed; /* ou absolute si tu préfères */
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    background-color: white;
+    border-radius: 15px;
+    padding: 50px;
+    z-index: 10;
+  }
+  .modal__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    z-index: 9;
+  }
+  .modal__close {
+    border: none;
+    background-color: white;
+    align-items: flex-end;
+    top: 5;
+    right: 5;
+    text-align: end;
+    font-size: 20px;
+    position: absolute;
+  }
+  .share-link {
+    text-decoration: none;
+    color: black;
+    background-color: rgb(236, 236, 238);
+    padding: 10px;
+    border-radius: 5px;
+  }
+  .modal__content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .modal__content > ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+    justify-items: center;
+    margin: auto;
+    padding: 0;
+  }
+</style>

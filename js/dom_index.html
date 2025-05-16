@@ -75,6 +75,7 @@
         transform: rotate(20deg);
         background-color: lightgreen;
       }
+      
     </style>
 
     <script>
@@ -144,9 +145,9 @@
 
     <!-- Camp  -->
     <h2>Camp de l'explorateur</h2>
-    
+
     <select id="objetSelect">
-      <option value="tente" >Tente</option>
+      <option value="tente">Tente</option>
       <option value="feu">Feu de camp</option>
       <option value="boussole">Boussole</option>
       <option value="jumelles">Jumelles</option>
@@ -154,7 +155,7 @@
     <button onclick="ajouterObjet()">Ajouter au sac</button>
 
     <h3>Sac à dos</h3>
-    
+
     <div
       id="sac"
       style="border: 1px solid gray; padding: 10px; min-height: 50px"
@@ -166,11 +167,30 @@
       style="border: 1px solid gray; padding: 10px; min-height: 50px"
     ></div>
 
+    <button id="openShareModal">Partager cet article</button>
+  <div class="modal" id="shareModal" aria-hidden="true">
+  <div class="modal__overlay" data-close="true"></div>
+  <div class="modal__content" role="dialog" aria-modal="true">
+    <button class="modal__close" aria-label="Fermer" data-close="true">&times;</button>
+    <h2>Partager cette page</h2>
+    <ul>
+      <li><a href="#" class="share-link" data-network="facebook">Facebook</a></li>
+      <li><a href="#" class="share-link" data-network="twitter">Twitter</a></li>
+      <li><a href="#" class="share-link" data-network="linkedin">LinkedIn</a></li>
+    </ul>
+  </div>
+</div>
 
-
-
-
-
-
+    <style>
+      .modal__overlay {
+        background-color: black (0, 0, 0, 0.5);
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+      }
+    </style>
   </body>
 </html>
