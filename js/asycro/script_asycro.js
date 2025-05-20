@@ -69,7 +69,7 @@ function timer() {
   }
 
   let text = document.createElement("p");
-  text.className ='Listbtn';
+  text.className = "Listbtn";
   text.textContent = getTexte(compteur);
 
   let startBtn = document.createElement("button");
@@ -118,4 +118,75 @@ function timer() {
   document.body.appendChild(reinstallBtn);
   document.body.appendChild(stopBtn); // ou dans un élément spécifique genre une div
   // Ne pas oublie cette merde en haut !
+}
+
+function express1() {
+  function executerFonction(fonction) {
+    saluer();
+    console.log("1");
+  }
+  function saluer() {
+    console.log("Bonjour tout le monde");
+    console.log("2");
+  }
+  executerFonction(saluer);
+}
+
+function express2() {
+  function direbonjour(name) {
+    console.log("Bonjours " + name);
+  }
+  function auRevoir(name) {
+    console.log("auRevoir " + name);
+  }
+  function Acceuillir(name, action) {
+    //  name = prompt("Quel est votre nom?");
+    // direbonjour(name);
+    // auRevoir(name);
+    action(name);
+  }
+  Acceuillir(prompt("quel est ton nom?"), direbonjour);
+  Acceuillir(prompt("quel est ton nom?"), auRevoir);
+}
+
+function express3() {
+  function poserQuestion(question, ouiCallback, nonCallback) {
+    let reponse = confirm(question);
+
+    if (reponse) {
+      ouiCallback();
+    } else {
+      nonCallback();
+    }
+  }
+  function oui() {
+    alert("Super choix");
+  }
+  function non() {
+    alert("Dommage..");
+  }
+  poserQuestion("Veut-tu apprendre JavaScript? oui / non ", oui, non);
+}
+
+function express4() {
+  let mots = ["pommes", "poire", "fraise"];
+
+  function animerMots(mots, Callback) {
+    let i = 0;
+    console.log(mots);
+
+    intervalID = setInterval(function () {
+      console.log(mots[i]);
+
+      if ((i++, i === mots.length)) {
+        clearInterval(intervalID);
+        Callback(animerMots);
+      }
+    }, 1000);
+  }
+
+  function motsCallback() {
+    alert("last step");
+  }
+  animerMots(mots, motsCallback);
 }
