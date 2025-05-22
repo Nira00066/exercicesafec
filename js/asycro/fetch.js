@@ -181,8 +181,6 @@ function fetch3() {
   divPage.className = "grille";
   divPage.id = "galerie";
 
-  
-
   document.body.appendChild(divPage);
 
   // Le bouton est deja crée et a les class besoin !
@@ -192,18 +190,14 @@ function fetch3() {
 
   btn.addEventListener("click", async function () {
     // la va etre l'action de ton randmon pour afficher ton id aleatoir !
-  
-// Mettre a vide la page 
-divPage.innerHTML='';
 
+    // Mettre a vide la page
+    divPage.innerHTML = "";
 
-     for( index = 0 ; pageActuelle == 10 ; index++ ){
-
-       let id = Math.floor(Math.random() * totalPersonnages - 10) + 1;
-       
-           const debut = "";
-           const fin = "";
-     }
+    for (index = 0; pageActuelle == 10; index++) {
+      const debut = "";
+      const fin = "";
+    }
     // On calcule les ID de début et de fin du groupe de 10 personnages à afficher
     // À faire
 
@@ -213,13 +207,19 @@ divPage.innerHTML='';
         `https://rickandmortyapi.com/api/character/${id}`
       );
       console.log("pourquuoi");
-      
+
       if (!response.ok) {
         throw new Error("error reponse");
         // console.log("erreur reponse")
       }
       let ids = [];
-      
+      while (ids.length < 10) {
+        let ramdomId = Math.floor(Math.random() * totalPersonnages) + 1;
+        if (!ids.includes(ramdomId)) {
+          ids.push(ramdomId);
+        }
+      }
+
       let data = await response.json();
       let name = data.name;
       console.log(name);
@@ -244,6 +244,171 @@ divPage.innerHTML='';
       // et il y a la facons de append ou appendChild pour la dernier je nest pas reussi a la mettre avec le meme style
     } catch (error) {
       console.error(error);
+    }
+  });
+}
+
+// Local Storager
+
+function LocalDemo() {
+  let input = document.createElement("input");
+  input.type = "text";
+  input.id = "champ-prenom";
+  input.placeholder = "Entrez votre prénom";
+  input.className = " form-control w-50 mn-2";
+  // Création de l'input
+  // <input type="text" id="champ-prenom" placeholder="Entrez votre prénom" class="form-control w-50 mb-2" />
+  // Rendu normal !
+  let btn = document.createElement("button");
+  btn.id = "btn-sauvegarder";
+  btn.className = "btn btn-success";
+  btn.textContent = "Sauvgarder";
+  // Creation de ton btn
+  // <button id="btn-sauvegarder" class="btn btn-success">Sauvegarder</button>
+  // Rendu normal
+
+  let text = document.createElement("p");
+  text.id = "message-accueil";
+  text.className = "mt-3";
+  // Creation d'une balise p
+  //  <p id="message-accueil" class="mt-3"></p>
+  // Rendu Normal !
+  let container = document.getElementById("container");
+
+  container.appendChild(input);
+  container.appendChild(btn);
+  container.appendChild(text);
+  // Script
+
+  // Si un prénom est déjà enregistré, on le récupère
+  let nomEnregistre = localStorage.getItem("prenom");
+  if (nomEnregistre) {
+    text.textContent = "Bonjour " + nomEnregistre;
+  }
+
+  // Quand on clique sur "Sauvegarder"
+  btn.addEventListener("click", function () {
+    let prenom = input.value.trim();
+
+    if (prenom !== "") {
+      localStorage.setItem("prenom", prenom);
+      text.textContent = "Bonjour " + prenom + " (enregistré)";
+      input.value = "";
+    }
+  });
+}
+
+function LocalDemo1() {
+  let btn = document.createElement("button");
+  btn.className = "btn btn-primary";
+  btn.id = "btn-eleves";
+  btn.textContent = " Afficher la Liste";
+
+  // retour Normal :<button id="btn-eleves" class="btn btn-primary">Afficher la liste</button>
+  let ul = document.createElement("ul");
+  ul.id = "liste-eleves";
+  ul.className = "mt-3 list-group w-50";
+
+  let container = document.getElementById("container");
+  container.appendChild(btn);
+  container.appendChild(ul);
+
+  btn.addEventListener("click", function () {
+    // Étape 1 : liste d’élèves à enregistrer
+    let eleves = ["guillaume", "angélique", "alan", "alvyn"];
+
+    // Étape 2 : enregistrer dans localStorage
+    localStorage.setItem("eleves", JSON.stringify(eleves));
+
+    // Étape 3 : récupérer la liste
+    let liste = JSON.parse(localStorage.getItem("eleves"));
+
+    // Étape 4 : afficher dans la page
+    ul.innerHTML = ""; // on vide d’abord
+
+    for (let i = 0; i < liste.length; i++) {
+      let li = document.createElement("li");
+      li.className = "list-group-item";
+      li.textContent = liste[i];
+      ul.appendChild(li);
+    }
+  });
+}
+// ! Attention si tu mets tes balise avec body alors elle sera toujours apres tout donc mis en dernier !
+function LocalDemo2() {
+  let btn = document.createElement("button");
+  btn.className = "btn btn-primary";
+  btn.id = "btn-eleves";
+  btn.textContent = " Afficher la Liste Exo 3";
+
+  // retour Normal :<button id="btn-eleves" class="btn btn-primary">Afficher la liste</button>
+  let ul = document.createElement("ul");
+  ul.id = "liste-eleves";
+  ul.className = "mt-3 list-group w-50";
+
+  let container = document.getElementById("container1");
+  container.appendChild(btn);
+  container.appendChild(ul);
+
+  btn.addEventListener("click", function () {
+    // 1. Liste initiale
+    let eleves = ["jean-francois", "ilona", "guillaume"];
+    localStorage.setItem("eleves", JSON.stringify(eleves));
+
+    // 2. Ajouter "nuno"
+    let liste = JSON.parse(localStorage.getItem("eleves"));
+    liste.push("nuno");
+    localStorage.setItem("eleves", JSON.stringify(liste));
+
+    // 3. Supprimer "ilona"
+    liste = liste.filter(function (prenom) {
+      return prenom !== "ilona";
+    });
+    localStorage.setItem("eleves", JSON.stringify(liste));
+
+    // 4. Modifier "dax" en "daxter"
+    liste = liste.map(function (prenom) {
+      return prenom === "dax" ? "daxter" : prenom;
+    });
+    localStorage.setItem("eleves", JSON.stringify(liste));
+
+    // 5. Affichage final
+    let listeFinale = JSON.parse(localStorage.getItem("eleves"));
+
+    // Afficher dans une liste HTML
+    ul.innerHTML = "";
+    for (let i = 0; i < listeFinale.length; i++) {
+      let li = document.createElement("li");
+      li.className = "list-group-item";
+      li.textContent = listeFinale[i];
+      ul.appendChild(li);
+    }
+  });
+}
+function LocalDemo3() {
+  let btn = document.createElement("button");
+  btn.className = "btn btn-primary";
+  btn.id = "btn-eleves";
+  btn.textContent = " Afficher la Liste Exo 4";
+
+  // retour Normal :<button id="btn-eleves" class="btn btn-primary">Afficher la liste</button>
+  let text = document.createElement("p");
+  text.id = "liste-eleves";
+  text.className = "mt-3 list-group w-50";
+
+  let container = document.getElementById("container2");
+  container.appendChild(btn);
+  container.appendChild(text);
+
+  btn.addEventListener("click", function () {
+    let alerteVue = sessionStorage.getItem("alerteDejaVue");
+
+    if (!alerteVue) {
+      text.textContent = "Pense à push ton travail !";
+      sessionStorage.setItem("alerteDejaVue", "true");
+    } else {
+      me;
+      text.textContent = "Alerte déjà affichée dans cette session.";
     }
   });
 }
