@@ -412,3 +412,90 @@ function LocalDemo3() {
     }
   });
 }
+
+function Local() {
+  let input = document.createElement("input");
+  input.type = "text";
+  input.id = "champ-prenom";
+  input.placeholder = "Entrez votre prénom";
+  input.className = " form-control w-50 mn-2";
+  // Création de l'input
+  // <input type="text" id="champ-prenom" placeholder="Entrez votre prénom" class="form-control w-50 mb-2" />
+  // Rendu normal !
+  let btn = document.createElement("button");
+  btn.id = "btn-sauvegarder";
+  btn.className = "btn btn-success";
+  btn.textContent = "Sauvgarder";
+  // Creation de ton btn
+  // <button id="btn-sauvegarder" class="btn btn-success">Sauvegarder</button>
+  // Rendu normal
+  let btnSupp = document.createElement("button");
+  btnSupp.id = "btn-delete";
+  btnSupp.className = "btn btn-waring";
+  btnSupp.textContent = "Supprimer";
+
+  let listeName = document.createElement("ul");
+  listeName.id = "message-accueil";
+  listeName.className = "mt-3";
+  // Creation d'une balise p
+  //  <p id="message-accueil" class="mt-3"></p>
+  // Rendu Normal !
+  let container = document.getElementById("container3");
+
+  container.appendChild(input);
+  container.appendChild(btn);
+  container.appendChild(btnSupp);
+  container.appendChild(listeName);
+
+  function getList() {
+    return JSON.parse(localStorage.getItem("eleves")) || [];
+  }
+
+  function setList(liste) {
+    localStorage.setItem("eleves", JSON.stringify(liste));
+  }
+  function afficherListe() {
+    let liste = getList();
+    listeName.innerHTML = "";
+    liste.forEach((prenom) => {
+      const li = document.createElement("li");
+      li.textContent = prenom;
+      listeName.appendChild(li);
+    });
+  }
+
+  btn.addEventListener("click", function () {
+    const prenom = input.value.trim();
+    if (!prenom) return;
+
+    let liste = getList();
+    if (!liste.includes(prenom)) {
+      liste.push(prenom);
+      setList(liste);
+      afficherListe();
+    }
+    input.value = "";
+  });
+
+  // ! Problem la dedans !
+  //Il ne me le refrech pas et supp pas mon element
+  btnSupp.addEventListener("click", function () {
+    const prenom = input.value.trim();
+    console.log(prenom);
+   
+    if (!prenom) return;
+    console.log(prenom);
+    let liste = getList();
+    if (
+      liste.filter(function (p) {
+        return p !== prenom;
+        console.log(prenom);
+      })
+    );
+    console.log(prenom);
+    console.log(afficherListe);
+
+    afficherListe();
+    input.value = "";
+  });
+}
