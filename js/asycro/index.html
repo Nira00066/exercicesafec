@@ -5,12 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script async src="script_asycro.js"></script>
+    <script async src="fetch.js"></script>
   </head>
   <body>
     <button onclick="defis2()" class="btn">defi2</button>
     <button onclick="defis3()" class="btn">defi3</button>
     <button onclick="defis4()" class="btn">defi4</button>
     <button onclick="timer()" class="btn">timer</button>
+
+    <h2>Defis express</h2>
+    <button onclick="express1()" class="btn">salutation</button>
+    <button onclick="express2()" class="btn">express2</button>
+    <button onclick="express3()" class="btn">express3</button>
+    <button onclick="express4()" class="btn">express4</button>
+
+    <h2>Fetch Demo</h2>
+    <button class="btn" onclick="fetch1()">fetch 1 pokemon</button>
+    <div id="pokemon" class="mt-3"></div>
+    <button class="btn" onclick="fetch2()">fetch 2 Rick et Morty</button>
+    <button class="btn" onclick="fetch3()">
+      fetch 2 Partie 2 Rick et Morty
+    </button>
+    <h2>LocalStorage Demo</h2>
+    <button class="btn" onclick="LocalDemo()">LocalStorage Demo</button>
+    <div id="container"></div>
+    <button class="btn" onclick="LocalDemo1()">LocalStorage Demo 2</button>
+    <div id="container"></div>
+
+    <button class="btn" onclick="LocalDemo2()">LocalStorage Demo 3</button>
+    <div id="container1"></div>
+
+    <button class="btn" onclick="LocalDemo3()">LocalStorage Demo 4</button>
+    <div id="container2"></div>
+
+    <h2>LocalStorage Exo</h2>
+
+    <button class="btn" onclick="Local()">LocalStorage Exo</button>
+    <div id="container3"></div>
+
+    <!-- <button onclick="fetch2()" class="btn">fetch2 Demo</button> -->
   </body>
   <style>
     body {
@@ -18,9 +51,15 @@
       flex-direction: column;
       gap: 10px;
     }
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
     .btn {
       padding: 10px;
       border-radius: 10px;
+      border: 1px solid black;
     }
     .Listbtn {
       display: flex;
@@ -36,6 +75,31 @@
     }
     .btn-danger {
       background-color: rgb(172, 3, 3);
+    }
+
+    /* Rick et Morty  style */
+
+    #character {
+      margin-top: 20px;
+      padding: 20px;
+      border-radius: 12px;
+      color: white;
+      max-width: 400px;
+      background-color: #1e1e2f;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    }
+
+    #character img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      transition: transform 0.3s;
+    }
+
+    #character h3 {
+      margin-bottom: 10px;
+      font-size: 1.5em;
     }
   </style>
 </html>
