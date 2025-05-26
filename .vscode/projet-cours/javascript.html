@@ -7,19 +7,31 @@
   </head>
   <body>
     <header><h1>JavaScript Cours</h1></header>
+    <script>
+      function change() {
+        if (window.document.formListe.liste.selectedIndex != 0) {
+          window.location =
+            window.document.formListe.liste.options[
+              document.formListe.liste.selectedIndex
+            ].value
+        }
+      }
+    </script>
     <nav>
-      <form action="get">
-        <select [(ngModel)]="model">
-          <option *ngFor="let item of list" [value]="item">Variables</option>
-          <option *ngFor="let item of list" [value]="item">Demo 1</option>
-          <option *ngFor="let item of list" [value]="item">Demo 2</option>
-          <option *ngFor="let item of list" [value]="item">Exercice 1</option>
-          <option *ngFor="let item of list" [value]="item">Exercice 2</option>
-          <option *ngFor="let item of list" [value]="item">Exercice 3</option>
-          <option *ngFor="let item of list" [value]="item">
-            Note + fichier
-          </option>
+
+      <form  name="formListe" action="get">
+        <select class="select_variables" onchange="change()" name="liste">
+          <option value="none" selected>Variables</option>
+          <option><a href="demo1_varibales.html">Demo 1</a></option>
+          <option><a href="demo2_variables.html">Demo 2</a></option>
+          <option value="exo1_variables.html">Exercice 1</option>
+          <option value="exo2_variables.html">Exercice 2</option>
+          <option value="exo3_variables.html">Exercice 3</option>
+          <option value="note_varaibles.html"> Note + fichier</option>
         </select>
+
+
+
         <select [(ngModel)]="model">
           <option *ngFor="let item of list" [value]="item">Opérateurs</option>
           <option *ngFor="let item of list" [value]="item">Demo 1</option>
@@ -88,7 +100,7 @@
           <option *ngFor="let item of list" [value]="item">Exercice 1</option>
           <option *ngFor="let item of list" [value]="item">Exercice 2</option>
           <option *ngFor="let item of list" [value]="item">Exercice 3</option>
-         
+
           <option *ngFor="let item of list" [value]="item">
             Note + fichier
           </option>
