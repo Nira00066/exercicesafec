@@ -21,6 +21,7 @@
       </ul>
     </div>
     <section id="howJs">
+      <h2>Comment utiliser le JavaScript ?</h2>
       <p>
         <strong>Pour de bonnes pratiques</strong>, on écrit toujours le
         JavaScript dans des fichiers avec l’extension <code>.js</code>.
@@ -60,6 +61,150 @@
 
       <pre><code>&lt;script src="mon-script.js" async&gt;&lt;/script&gt;
         &lt;script src="mon-script.js" defer&gt;&lt;/script&gt;</code></pre>
+    </section>
+
+    <section id="varJs">
+      <h2>Les variables</h2>
+      <p><strong>Imaginons un conteneurs de marchandises</strong></p>
+      <li>le conteneur = la variables</li>
+      <li>ce qu'il y a dedans = la valeur</li>
+      <p>
+        Si on souhaite faire une métaphore, on peut prendre un conteneur de
+        marchandises. Le conteneur correspond à la variable et la valeur
+        correspond au contenu du conteneur.
+      </p>
+      <h3>C'est quoi une variable?</h3>
+      <p>
+        Une variable est un conteneur dans lequel on peut stocker une
+        information : un mot, un nombre, un booléen (vrai/faux), etc. C’est
+        temporaire, ça ne reste pas gravé quelque part : les variables vivent le
+        temps que le programme s’exécute.
+      </p>
+      <h3>Comment stocker les variavles a long terme?</h3>
+      <p>
+        Pour garder des infos plus longtemps (par exemple entre deux visites sur
+        un site), il faudra utiliser une autre méthode : une base de données,
+        des fichiers, ou encore des cookies.
+      </p>
+      <h3>Pourquoi utiliser une variable ?</h3>
+      <p>
+        Parce qu’on a souvent besoin de stocker et manipuler des infos dans
+        notre code
+      </p>
+      <ul>
+        <li>Le prénom d'un utilisateur</li>
+        <li>Un score dans un jeu</li>
+        <li>Une date ou une couleur sélectionnée</li>
+      </ul>
+      <p>
+        En fait, presque tout ce qu’on fera plus tard en JS tournera autour de
+        variables. C’est pour ça qu’il faut les voir dès le début.
+      </p>
+
+      <h3>Déclarer une variable en JavaScript</h3>
+      <p>Pour créer une variable, on a 3 façons principales :</p>
+
+      <ul>
+        <li>
+          <strong>let</strong> : Permet de déclarer une variable dont la
+          <strong>portée est limitée au bloc</strong> dans lequel elle est
+          définie. Sa valeur peut changer.
+        </li>
+      </ul>
+      <pre><code>let age;</code></pre>
+      <p>
+        👉 Ici, on déclare une variable <code>age</code> qui peut être modifiée
+        plus tard.
+      </p>
+
+      <ul>
+        <li>
+          <strong>const</strong> : Déclare une constante, aussi limitée au bloc,
+          mais <strong>sa valeur ne peut PAS être modifiée</strong>.
+        </li>
+      </ul>
+      <pre><code>const age;</code></pre>
+      <p>
+        🚫 Ici, on essaye de créer une constante <code>age</code>, mais
+        attention : il faut lui donner une valeur directement, sinon ça
+        plantera.
+      </p>
+
+      <ul>
+        <li>
+          <strong>var</strong> : Ancien mot-clé pour déclarer une variable.
+          Encore reconnu, mais à éviter :
+          <strong>portée moins précise</strong> et comportement parfois étrange.
+        </li>
+      </ul>
+      <p>
+        ⚠️ <strong>Mauvaise pratique</strong> : <code>var</code> est voué à
+        disparaître, mieux vaut utiliser <code>let</code> ou
+        <code>const</code> dès maintenant.
+      </p>
+
+      <h4>Exemples :</h4>
+      <pre><code>// Bonne pratique
+            let nom = "Nina";
+            const PI = 3.14;
+
+    // Mauvaise pratique
+    var message = "Salut";</code></pre>
+
+      <h3>Règles à respecter pour nommer une variable</h3>
+      <ul>
+        <li>
+          ✅ Le nom doit commencer par une <strong>lettre</strong> ou un
+          <strong>underscore (_)</strong>
+        </li>
+        <li>
+          🚫 <strong>Pas d'espaces</strong>, ni de caractères spéciaux comme
+          <code>-</code>, <code>!</code>, <code>%</code>, etc.
+        </li>
+        <li>
+          ⚠️ Les noms sont <strong>sensibles à la casse</strong> :
+          <code>test</code>, <code>Test</code> et <code>TEST</code> sont
+          <strong>différents</strong>
+        </li>
+        <li>
+          💡 Toujours terminer une instruction par un
+          <strong>point-virgule ;</strong>
+        </li>
+      </ul>
+
+      <h3>❌ Mauvais noms de variables</h3>
+      <table border="1" cellpadding="5">
+        <thead>
+          <tr>
+            <th>Nom</th>
+            <th>Pourquoi ?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>let une variable;</code></td>
+            <td>Contient un espace</td>
+          </tr>
+          <tr>
+            <td><code>let 1variable;</code></td>
+            <td>Commence par un chiffre</td>
+          </tr>
+          <tr>
+            <td><code>let une-variable;</code></td>
+            <td>Contient un caractère spécial (-)</td>
+          </tr>
+          <tr>
+            <td><code>let unevariable</code></td>
+            <td>Oublie le point-virgule à la fin</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>
+        <strong>Exemples de noms de variables interdits</strong> en JavaScript :
+        <code>let mon var;</code>, <code>let @data;</code>,
+        <code>let 123truc;</code>
+      </p>
     </section>
   </body>
 </html>
