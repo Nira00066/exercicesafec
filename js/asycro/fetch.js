@@ -450,12 +450,14 @@ function Local() {
   function getList() {
     return JSON.parse(localStorage.getItem("eleves")) || [];
   }
+  console.log(getList);
 
   function setList(liste) {
     localStorage.setItem("eleves", JSON.stringify(liste));
   }
   function afficherListe() {
-    let liste = getList();
+    let liste = JSON.parse(localStorage.getItem("eleves"));
+
     listeName.innerHTML = "";
     liste.forEach((prenom) => {
       const li = document.createElement("li");
@@ -463,39 +465,46 @@ function Local() {
       listeName.appendChild(li);
     });
   }
+  console.log(btnSupp);
 
   btn.addEventListener("click", function () {
     const prenom = input.value.trim();
-    if (!prenom) return;
+    // if (!prenom) return;
 
-    let liste = getList();
-    if (!liste.includes(prenom)) {
+    let liste = JSON.parse(localStorage.getItem("eleves"));
+
       liste.push(prenom);
-      setList(liste);
-      afficherListe();
-    }
+
+    afficherListe();
     input.value = "";
   });
 
   // ! Problem la dedans !
   //Il ne me le refrech pas et supp pas mon element
   btnSupp.addEventListener("click", function () {
+    console.log("prenom");
+    //  alert('help');
     const prenom = input.value.trim();
     console.log(prenom);
-   
-    if (!prenom) return;
-    console.log(prenom);
-    let liste = getList();
-    if (
-      liste.filter(function (p) {
-        return p !== prenom;
-        console.log(prenom);
-      })
-    );
-    console.log(prenom);
-    console.log(afficherListe);
 
-    afficherListe();
-    input.value = "";
+    if (prenom !== "") {
+      let liste = getList();
+      console.log(liste);
+
+      let listeMaj = liste.filter(function (prenomListe) {
+        return prenom !== prenomListe;
+      });
+
+      let listeMajson = JSON.stringify(listeMaj);
+
+      console.log(listeMajson);
+
+      setList(listeMajson);
+
+      afficherListe();
+      input.value = "";
+    }
+
+    // afficherListe();
   });
 }

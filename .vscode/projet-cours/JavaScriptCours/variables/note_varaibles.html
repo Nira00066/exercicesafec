@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Les variables JavaScript</h1>
+    <p>
+      Objectif: Apprendre les bases de JavaScript pour pouvoir écrire des petits
+      bouts de code qui réagissent,s'adaptent et font des choses utiles !
+    </p>
+    <div>
+      <h2>Sommaire</h2>
+      <ul>
+        <li><a href="#howJs">Comment utiliser le JavaScript ? </a></li>
+        <li><a href="#varJs">Les variables en JavaScript</a></li>
+        <li><a href="#Ressources">Ressources</a></li>
+        <li><a href="#note">Note de moi même !</a></li>
+      </ul>
+    </div>
+    <section id="howJs">
+      <p>
+        <strong>Pour de bonnes pratiques</strong>, on écrit toujours le
+        JavaScript dans des fichiers avec l’extension <code>.js</code>.
+      </p>
+
+      <p>
+        <strong>⚠️ Attention :</strong> On n’écrit pas du JavaScript directement
+        sur des balises HTML, c’est une très mauvaise pratique.
+      </p>
+
+      <p>
+        On peut créer des modules dans différents fichiers JavaScript et les
+        importer dans un fichier final.
+      </p>
+
+      <p>Pour lier un fichier JavaScript en HTML, on utilise cette balise :</p>
+
+      <pre><code>&lt;script src="mon-script.js"&gt;&lt;/script&gt;</code></pre>
+
+      <p>
+        On peut aussi ajouter des attributs pour contrôler le comportement du
+        chargement :
+      </p>
+
+      <ul>
+        <li>
+          <strong>async</strong> : charger/exécuter le script de façon
+          asynchrone. Il s'exécutera dès qu'il sera téléchargé.
+        </li>
+        <li>
+          <strong>defer</strong> : exécuter le script seulement après le
+          chargement complet du document HTML. L'ordre des scripts est respecté.
+        </li>
+      </ul>
+
+      <p>Exemples :</p>
+
+      <pre><code>&lt;script src="mon-script.js" async&gt;&lt;/script&gt;
+        &lt;script src="mon-script.js" defer&gt;&lt;/script&gt;</code></pre>
+    </section>
+  </body>
+</html>

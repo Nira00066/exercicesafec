@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <input type="text" id="prenom" placeholder="Prénom" />
+    <button onclick="ajouterPrenom()">Ajouter</button>
+    <button onclick="supprimerPrenom()">Supprimer</button>
+
+    <h3>Prénoms enregistrés :</h3>
+    <ul id="liste"></ul>
+
+    <script>
+      if (!localStorage.getItem("eleves")) {
+        localStorage.setItem("eleves", JSON.stringify([]));
+      }
+
+      let input = document.getElementById("prenom");
+      let listeName = document.getElementById("liste");
+
+      function getList() {
+        return JSON.parse(localStorage.getItem("eleves")) || [];
+      }
+      console.log(getList);
+
+      function setList(liste) {
+        localStorage.setItem("eleves", JSON.stringify(liste));
+      }
+      function afficherListe() {
+        let liste = JSON.parse(localStorage.getItem("eleves"));
+
+        // reset div
+        listeName.innerHTML = "";
+
+        for (let i = 0; i <= liste.length; i++) {
+          // liste.forEach((prenom) => {
+          let li = document.createElement("li");
+          li.textContent = liste[i];
+          listeName.appendChild(li);
+          
+          // });
+        }
+      }
+
+      function ajouterPrenom() {
+        const prenom = input.value.trim();
+        console.log(prenom);
+
+        if (prenom !== "") {
+          console.log(prenom);
+
+          //JSON.parse(localStorage.getItem("eleves"));
+          let liste = JSON.parse(localStorage.getItem("eleves"));
+          //JSON.parse(localStorage.getItem("eleves"));
+          liste.push(prenom);
+          localStorage.setItem('eleves',JSON.stringify(liste));
+        }
+        console.log(liste);
+
+        afficherListe();
+        input.value = "";
+      }
+
+      // ! Problem la dedans !
+      //Il ne me le refrech pas et supp pas mon element
+      function supprimerPrenom() {
+        console.log("prenom");
+        //  alert('help');
+        const prenom = input.value.trim();
+        console.log(prenom);
+
+        if (prenom !== "") {
+          let liste = getList();
+          console.log(liste);
+
+          let listeMaj = liste.filter(function (prenomListe) {
+            return prenom !== prenomListe;
+          });
+
+          let listeMajson = JSON.stringify(listeMaj);
+
+
+        localStorage.setItem("eleves", JSON.stringify(listeMajson));
+
+
+          afficherListe();
+          input.value = "";
+        }
+      }
+
+      afficherListe();
+    </script>
+  </body>
+</html>
