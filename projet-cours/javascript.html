@@ -16,41 +16,46 @@
             ].value;
         }
       }
-    </script>
+      </script>
     <nav>
-      <form name="formListe" action="get">
+      <form name="formListe" action="GET">
         <select class="select_variables" onchange="change()" name="liste">
           <option value="none" selected>Variables</option>
-          <option>
-            <a href="./JavaScriptCours/variables/demo1_varibales.html"
-              >Demo 1</a
-            >
+          <option value="./JavaScriptCours/variables/note_varaibles.html">
+       Leçons + note
           </option>
-          <option value="./JavaScriptCours/variables/demo2_variables.html">
-            Demo
+          <option value=".\JavaScriptCours\variables\demo1_varibales.html">
+            
+            Demo 1
           </option>
-          <option value="./JavaScriptCours/variables/exo1_variables.html">
+          <option value=".\JavaScriptCours\variables\demo2_varibales.html">
+            Demo 2
+          </option>
+          <option value=".\JavaScriptCours\variables\exo1_varibales.html">
             Exercice 1
           </option>
-          <option value="./JavaScriptCours/variables/exo2_variables.html">
+          <option value=".\JavaScriptCours\variables\exo2_variables.html">
             Exercice 2
           </option>
-          <option value="./JavaScriptCours/variables/exo3_variables.html">
+          <option value=".\JavaScriptCours\variables\exo3_variables.html">
             Exercice 3
-          </option>
-          <option value="./JavaScriptCours/variables/note_varaibles.html">
-            Note + fichier
           </option>
         </select>
 
-        <select >
-          <option value="">Opérateurs</option>
-          <option value="">Demo 1</option>
-          <option value="">Exercice 1</option>
+        <select class="select_variables" onchange="change()" name="liste">
+          <option value="none">Opérateurs</option>
+          <option value="./JavaScript/operateurs/note_varaibles.html">Leçons + note </option>
+          <option value="./JavaScript/operateurs/demo1_operateurs.html">Demo 1</option>
+          <option value="./JavaScript/operateurs/exo1_operateurs.html">Exercice 1</option>
           <option value="">Exercice 2</option>
           <option value="">Exercice 3</option>
-          <option value="">Note + fichier</option>
         </select>
+
+
+
+
+
+
         <select>
           <option value="">Fonctions</option>
           <option value="">Demo 1</option>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mes cours html</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1>Les bases d'une geek/d'un geek</h1>
+
+      <h2>Mes cours et leçons</h2>
+      <script>
+        function change() {
+          if (window.document.formListe.liste.selectedIndex != 0) {
+            window.location =
+              window.document.formListe.liste.options[
+                document.formListe.liste.selectedIndex
+              ].value;
+          }
+        }
+      </script>
+      <nav>
+      
+          
+          <form name="formListe" action="get">
+              <select class="select_variables" onchange="change()" name="liste">
+                  <option value="none" selected>les bases</option>
+                  
+                  <option value="projet-cours\htmlCours\lesbases.html">Note + fichier</option>
+                  <option value="exos1-bases.html">Exercice 1</option>
+                  <option value="index.html">Exercice 1 correction</option>
+                </select>
+                <!-- ------------------------------------------------------------------- -->
+                <select class="select_variables" onchange="change()" name="liste">
+                    <option value="none" selected>les formulaire</option>
+                    
+                    <option value="lesbases.html">Note + fichier</option>
+                    <option value="exos1-bases.html">Exercice 1</option>
+                    <option value="exo1correction.html">Exercice 1 correction</option>
+                </select>
+                
+                
+                <select class="select_variables" onchange="change()" name="liste">
+                    <option value="none" selected>l'accessibilité web</option>
+                    
+                    <option value="accessibilite.html">Note + fichier</option>
+                    <option value="exos1-accex.html">Exercice 1</option>
+                    <option value="exo1Accex_correction.html">Exercice 1 correction</option>
+                </select>
+            </form>
+        </nav>
+      
+    </header>
+  </body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exo 3 Variables</title>
+  </head>
+  <body>
+    <section class="demo">
+      <div class="demo__left">
+        <h1>🌳 Aventure dans la Forêt du Code</h1>
+        <h2>🎮 Contexte :</h2>
+        <p>
+          Tu es développeur(se) et joueur(se) dans un mini-jeu de survie où tu
+          gères ton score, ton énergie, ton inventaire, et ton statut. Chaque
+          action va influencer plusieurs variables !
+        </p>
+        <h2>Objectif :</h2>
+        <p>
+          Créer et manipuler plusieurs variables pour simuler l’évolution d’un
+          personnage dans un jeu.
+        </p>
+        <h3>Variables à créer :</h3>
+        <ol>
+          <li><u>score</u> — Commence à 100</li>
+          <li><u>energy</u> — Commence à 80</li>
+          <li>
+            <u>hasPotion</u> — Commence à false (le joueur n’a pas encore trouvé
+            de potion)
+          </li>
+          <li><u>inventory</u> — Commence à "épée en bois"</li>
+          <li><u>isAlive</u> — Commence à true</li>
+        </ol>
+
+        <h2>Consignes :</h2>
+        <p>
+          À chaque étape du scénario à simuler, écrire la fonction "<a
+            href="https://developer.mozilla.org/en-US/docs/Web/API/console/log_static"
+            >console.log</a
+          >(votre_variable)" pour analyser les étapes dans la console du
+          navigateur.
+        </p>
+        <p>
+          Utilise
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/API/console/log_static"
+            >console.log()</a
+          >
+          après chaque action pour observer les changements des variables dans
+          la console développeur (F12 > onglet Console).
+        </p>
+        <h3>Scénario à simuler pas à pas :</h3>
+        <ol>
+          <li>
+            Le joueur trouve une potion → <u>hasPotion</u> devient true et il
+            gagne +20 en <u>energy</u>.
+          </li>
+          <li>
+            Il tombe dans un piège → il perd 40 d'<u>energy</u> et perd 25
+            points à son <u>score</u>.
+          </li>
+          <li>
+            Il rencontre un dragon menaçant et perd son épée en bois de son
+            <u>inventory</u> au cours d'un combat féroce.
+          </li>
+          <li>
+            Victorieux, il a tout de même perdu 40 points d'<u>energy</u> et 30
+            points à son <u>score</u>.
+          </li>
+          <li>
+            En chemin, il trouve un arc et l'ajoute à son <u>inventory</u>.
+          </li>
+          <li>
+            Fatigué d'un long périple à la recherche d'une potion, il épuise son
+            <u>energy</u> qui atteint 0.
+          </li>
+          <li>
+            <u>isAlive</u> passe alors à false puisque le joueur est élimliné.
+          </li>
+        </ol>
+        <p>
+          À la fin déroulement du jeu, insérer vos variables avec l'opérateur
+          prepend :
+        </p>
+        <code>
+          document.body.prepend(hasPotion);<br />
+          document.body.prepend(energy);<br />
+          document.body.prepend(score);<br />
+          document.body.prepend(isAlive);<br />
+          document.body.prepend(inventory);
+          <br />
+          <br />
+          ou
+          <br />
+          <br />
+          document.body.prepend(inventory, isAlive, score, energy, hasPotion);
+        </code>
+        (En savoir plus sur
+        <a
+          href="https://developer.mozilla.org/fr/docs/Web/API/Element/prepend"
+          style="color: #fff"
+          target="_blank"
+          >prepend()</a
+        >)
+      </div>
+      <div class="demo__right">
+        <div class="demo__right__inner">
+          <img
+            src="https://www.afecdax.ovh/ressources/dev/js/exercices/images/foretducode.jpg"
+            style="max-width: 100%"
+          />
+        </div>
+      </div>
+    </section>
+
+    <div class="menu-correction">
+      <div class="menu-correction__btn-close">
+        <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M3.2 16.8 16.8 3.2M3.2 3.2l13.6 13.6"
+            vector-effect="non-scaling-stroke"
+          />
+        </svg>
+      </div>
+      <div class="menu-correction__inner">
+        <code class="menu-correction__scrollable">
+          <pre>
+let score = 100;
+let energy = 80;
+let hasPotion = false;
+let inventory = "épée en bois";
+let isAlive = true;
+
+hasPotion = true;
+energy = 80 + 20;
+energy = energy - 40;
+score = score - 25;
+inventory = "";
+energy = energy - 40;
+score = score - 40;
+energy = 0;
+isAlive = false;
+
+document.body.prepend('Potion : ' + hasPotion);
+document.body.prepend('Energie : ' + energy + ' - ');
+document.body.prepend('Score : ' + score + ' - ');
+document.body.prepend('Inventaire : ' + inventory + ' - ');
+			</pre
+          >
+        </code>
+      </div>
+    </div>
+  </body>
+</html>

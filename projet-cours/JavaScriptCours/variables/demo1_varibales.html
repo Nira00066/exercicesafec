@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<section class="demo">
+	<div class="demo__left">
+	<h1>Démo — Les variables en JavaScript</h1>
+	<p>Ouvre la console du navigateur (clic droit > Inspecter > onglet Console) pour voir les résultats des boucles.</p>
+	<h2>1. Déclaration et initialisation avec let et const</h2>
+<code><pre>// Déclaration avec `let`
+let nom = 'Alice';
+console.log('Nom (let):', nom);
+
+// Déclaration avec `const`
+const PI = 3.14;
+console.log('PI (const):', PI);
+
+// Modifications autorisées
+age = 30;
+nom = 'Bob';
+console.log('Nouvel âge:', age);
+console.log('Nouveau nom:', nom);
+
+// Modification interdite
+// PI = 3.14159; // ❌ Erreur si décommenté</pre></code>
+
+	<h2>2. Concaténation et template literals</h2>
+<code><pre>
+let firstName = 'Alice';
+let lastName = 'Smith';
+let fullName = firstName + ' ' + lastName;
+console.log(fullName);
+
+let greeting = 'Hello';
+let message = greeting.concat(', ', fullName, '!');
+console.log(message);
+
+let age = 30;
+let bio = `My name is ${fullName} and I am ${age} years old.`;
+console.log(bio);</pre></code>
+	<h2>3. Constantes et affichage de valeurs</h2>
+  	
+<code><pre>
+let nombreUtilisateurs = 100;
+const TAUX_IMPOSITION = 0.15;
+
+console.log("Nombre d'utilisateurs:", nombreUtilisateurs);
+console.log("Taux d'imposition:", TAUX_IMPOSITION);</pre></code>
+	<h2>4. Variables + opérations logiques</h2>
+  	
+<code><pre>
+let prenom = 'Alice';
+let age = 25;
+const PI = 3.14;
+let estMajeur = age >= 18;
+
+console.log('Bonjour, ' + prenom);
+console.log('Âge : ' + age);
+console.log('Est majeur ? ' + estMajeur);
+console.log("Le double de l'âge est : " + age * 2);
+console.log('Pi est égal à ' + PI);</pre></code>
+<h2>5. Portée des variables (globale, locale, bloc)</h2>
+<code><pre>
+// Variable globale
+let messageGlobal = 'Je suis accessible partout';
+
+function maFonction() {
+let messageLocal = 'Je suis dans la fonction';
+console.log('Message global:', messageGlobal);
+console.log('Message local:', messageLocal);
+}
+
+maFonction();
+
+console.log('Global dehors:', messageGlobal);
+// console.log(messageLocal); // ❌ Erreur
+
+if (true) {
+let ville = 'Paris';
+const pays = 'France';
+console.log('Ville:', ville);
+console.log('Pays:', pays);
+}
+
+// console.log(ville); // ❌ Erreur
+// console.log(pays); // ❌ Erreur</pre></code>
+
+<h2>6. Type des variables avec typeof</h2>
+<code><pre>
+let num = 10;
+console.log(typeof num); // "number"
+
+let name = 'Alice';
+console.log(typeof name); // "string"
+
+let isActive = true;
+console.log(typeof isActive); // "boolean"
+
+let arr = [1, 2, 3];
+console.log(typeof arr); // "object"
+
+let func = function () {};
+console.log(typeof func); // "function"
+
+let notAssigned;
+console.log(typeof notAssigned); // "undefined"
+
+function checkInput(input) {
+	if (typeof input === 'string') {
+		console.log("C'est une chaîne");
+	} else if (typeof input === 'number') {
+		console.log("C'est un nombre");
+	} else if (typeof input === 'boolean') {
+		console.log("C'est un booléen");
+	} else {
+		console.log("Type inconnu");
+	}
+}
+
+checkInput('Hello');
+checkInput(42);
+checkInput(true);</pre></code>
+
+<h2>7. Les principaux types de données</h2>
+<code><pre>
+let nombre = 42;
+let texte = 'Bonjour tout le monde';
+let estValide = true;
+let utilisateur = { nom: 'Alice', age: 30 };
+let fruits = ['pomme', 'banane', 'cerise'];
+
+console.log('Nombre:', nombre);
+console.log('Texte:', texte);
+console.log('Est valide:', estValide);
+console.log('Utilisateur:', utilisateur);
+console.log('Fruits:', fruits);</pre></code>
+	<hr>
+	<p>Tous les scripts ci-dessus sont automatiquement exécutés au chargement de cette page. Regarde dans la console du navigateur !</p>
+	</div>
+	<div class="demo__right">
+		<div class="demo__right__inner">	
+			<img src="https://www.afecdax.ovh/ressources/dev/js/exercices/images/variablesjsdemo.jpg" style="max-width: 100%;">
+		</div>
+	</div>
+</section>
+</body>
+</html>

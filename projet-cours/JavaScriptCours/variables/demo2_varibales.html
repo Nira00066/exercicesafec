@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<section class="demo">
+	<div class="demo__left">
+	<h1>Démo — Les chaînes de caractères en JavaScript</h1>
+	<p>Ouvre la console du navigateur (clic droit > Inspecter > onglet Console) pour voir les résultats des boucles.</p>
+	<h2>1. Déclaration de chaînes</h2>
+  <p>Différentes manières de créer une chaîne : simple quote, double quote, ou template literal</p>
+<code>
+  <pre>
+let simpleQuote = 'Bonjour tout le monde';
+let doubleQuote = "JavaScript est génial";
+let templateLiteral = `Il fait ${2 + 2} degrés`;
+
+console.log(simpleQuote);
+console.log(doubleQuote);
+console.log(templateLiteral);
+</pre>
+</code>
+
+	<h2>2. Longueur d’une chaîne</h2>
+  <p>Utilisation de .length pour connaître le nombre de caractères.</p>
+
+<code>
+<pre>console.log("Longueur de 'simpleQuote':", simpleQuote.length);</pre>
+</code>
+
+	<h2>3. Mise en majuscules / minuscules / nettoyage</h2>
+  	
+<code><pre>
+console.log("En majuscules:", simpleQuote.toUpperCase());
+console.log("En minuscules:", doubleQuote.toLowerCase());
+console.log("Sans espaces:", "   Hello   ".trim());</pre>
+</code>
+
+	<h2>4. Accès à un caractère et recherche dans une chaîne</h2>
+  	
+<code><pre>
+console.log("Premier caractère de 'JavaScript':", 'JavaScript'.charAt(0));
+console.log("Position de 'world':", 'Hello world!'.indexOf('world'));
+console.log("Position de 'z' dans 'JavaScript':", 'JavaScript'.indexOf('z'));</pre></code>
+
+<h2>5. Extraction de sous-chaînes</h2>
+<code><pre>
+let sentence = 'Manipulations de chaînes';
+console.log("Avec slice:", sentence.slice(0, 12));
+console.log("Avec substring:", sentence.substring(0, 12));</pre></code>
+
+<h2>6. Remplacer un mot ou une expression</h2>
+<code><pre>
+let phrase = 'Bonjour tout le monde';
+console.log(phrase.replace('Bonjour', 'Salut'));
+
+let text = 'ToutouMédor est gentil. ToutouMédor est gourmand.';
+console.log(text.replace(/ToutouMédor/g, 'Médor'));</pre></code>
+
+<h2>7. Diviser une chaîne + vérification d'inclusion</h2>
+<code><pre>
+let data = 'pomme,banane,cerise';
+console.log(data.split(','));
+console.log('JavaScript est flexible'.includes('flexible'));</pre></code>
+
+<h2>8. Concaténation</h2>
+<code><pre>
+let greeting = 'Bonjour, ' + 'le monde!';
+console.log(greeting);
+
+let name = 'Médor';
+let welcomeMessage = `Bienvenue à ${name}, notre nouveau toutou!`;
+console.log(welcomeMessage);</pre></code>
+	<hr>
+	<p>Tous les scripts ci-dessus sont automatiquement exécutés au chargement de cette page. Regarde dans la console du navigateur !</p>
+	</div>
+	<div class="demo__right">
+		<div class="demo__right__inner">	
+			<img src="https://www.afecdax.ovh/ressources/dev/js/exercices/images/variablesjsdemo.jpg" style="max-width: 100%;">
+		</div>
+	</div>
+</section>
+</body>
+</html>

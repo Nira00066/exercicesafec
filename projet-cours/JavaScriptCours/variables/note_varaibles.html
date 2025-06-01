@@ -3,9 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Les variables</title>
   </head>
   <body>
+    <header class="header">
+      <h1>Les bases d'une geek/d'un geek</h1>
+      <nav>
+        <ul>
+          <li><a href="/projet-cours/index.html">Acceuil</a></li>
+          <li><a href="/projet-cours/javascript.html">JavaScript</a></li>
+          <li><a href="/projet-cours/html.html">Html</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="bloc-suite">
+      <h4>Suite des cours</h4>
+      <ul>
+        <li><a href="" class="links"></a></li>
+        <li><a href="" class="links"></a></li>
+        <li><a href="" class="links"></a></li>
+        <li><a href="" class="links"></a></li>
+        <li><a href="" class="links"></a></li>
+        <li><a href="" class="links"></a></li>
+        <li><a href="" class="links"></a></li>
+        <li><a href="" class="links"></a></li>
+      </ul>
+    </div>
     <h1>Les variables JavaScript</h1>
     <p>
       Objectif: Apprendre les bases de JavaScript pour pouvoir écrire des petits
@@ -205,6 +228,107 @@
         <code>let mon var;</code>, <code>let @data;</code>,
         <code>let 123truc;</code>
       </p>
+      <h2>Les règles à respecter pour nommer une variable :</h2>
+      <ul>
+        <li>
+          Le nom doit commencer par une lettre ou un underscore <code>_</code>
+        </li>
+        <li>
+          Pas d’espaces, ni de tirets (ex : -, !, %) → seul le underscore
+          <code>_</code> est autorisé
+        </li>
+        <li>
+          Les noms sont sensibles à la casse : <code>test</code>,
+          <code>Test</code> et <code>TEST</code> sont différents
+        </li>
+        <li>N'oublie pas le <code>;</code> à la fin !</li>
+      </ul>
+
+      <h2>Exemples de mauvais noms de variables :</h2>
+      <ul>
+        <li>
+          <code class="bad">let une variable;</code> → Contient un espace ❌
+        </li>
+        <li>
+          <code class="bad">let 1variable;</code> → Commence par un chiffre ❌
+        </li>
+        <li>
+          <code class="bad">let une-variable;</code> → Contient un caractère
+          spécial ❌
+        </li>
+        <li>
+          <code class="bad">let unevariable</code> → Oublie le <code>;</code> ❌
+        </li>
+      </ul>
+
+      <h2>Initialiser une variable</h2>
+      <pre><code>
+let prenom;
+prenom = "Sophie";
+
+let prenom = 'Sophie';
+let prenom = "sophie";
+  </code></pre>
+
+      <p>
+        On peut utiliser des guillemets simples ou doubles pour les chaînes de
+        caractères.
+      </p>
+
+      <h2>Afficher le contenu d'une variable</h2>
+      <pre><code>
+let message = 'Bonjour tout le monde';
+alert(message);
+  </code></pre>
+
+      <h2>Redéclarer une variable ? Attention !</h2>
+      <pre><code>
+let message = 'Bonjour tout le monde';
+let message = 'Bienvenue'; // ❌ Erreur : déjà déclaré
+
+// ✔️ Correct :
+let message = 'Bonjour tout le monde';
+message = 'Bienvenue';
+  </code></pre>
+
+      <h2>Concaténation de variables avec +=</h2>
+      <pre><code>
+let score = 2;
+let message = 'Bienvenue';
+
+score += 3;         // Affichera 5
+message += ' à tous'; // Affichera “Bienvenue à tous”
+  </code></pre>
+
+      <h2>Les types de données en JavaScript</h2>
+      <pre><code>
+let age = 25;
+let prix = 19.99;
+let total = 10 + 5;
+let isConnected = true;
+let isAdmin = false;
+  </code></pre>
+      <p>Types : Number, Boolean, String, etc.</p>
+
+      <h2>Tableaux (Array)</h2>
+      <pre><code>
+let fruits = ["pomme", "banane", "banane"];
+let scores = [12, 15, 19, 21];
+
+console.log(fruits[0]); // "pomme"
+  </code></pre>
+
+      <h2>Objet (Object)</h2>
+      <pre><code>
+let joueur = {
+  nom: "Léo",
+  age: 20,
+  niveau: "débutant",
+  isConnected: true
+};
+
+console.log(joueur.nom); // "Léo"
+  </code></pre>
     </section>
   </body>
 </html>
